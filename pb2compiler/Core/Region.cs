@@ -24,7 +24,6 @@ namespace PlazmaScript.Core
             var xElement = new XElement("region");
 
             xElement.SetAttributeValue("uid", Uid);
-            xElement.SetAttributeValue("comp", Pb2Config.Fragment.Id);
             xElement.SetAttributeValue("x", X.ToString());
             xElement.SetAttributeValue("y", Y.ToString());
             xElement.SetAttributeValue("w", Width.ToString());

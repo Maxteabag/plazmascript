@@ -152,6 +152,8 @@ namespace PlazmaScript
 
                 foreach (var x in PB2Map.MapObjects)
                 {
+                    var xmlElement = x.CreateXmlElement();
+                    xmlElement.SetAttributeValue("comp", Pb2Config.Fragment.Id);
                     await x.CreateXmlElement().WriteToAsync(write, cancel);
                 }
 
