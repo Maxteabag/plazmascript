@@ -261,3 +261,5 @@ __pycache__/
 *.pyc
 pb2compiler/password.txt
 pb2compiler/GeneratedMaps/
+
+!pb2compiler/GeneratedMaps/map.txt
