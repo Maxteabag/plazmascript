@@ -12,18 +12,18 @@ namespace PlazmaScript
             /// <summary>
             /// This is the id of the map
             /// </summary>
-            public static string MapId { get; set; } = "Max teabag-test";
+            public static string MapId { get; set; } = "";
             /// <summary>
             /// Map UId, can be found in the URL in the map page
             /// </summary>
-            public static string MapUid { get; set; } = "960532";
+            public static string MapUid { get; set; } = "";
         }
         public static class User
         {
             /// <summary>
             /// This is your PB2 username
             /// </summary>
-            public static string Login { get; set; } = "Max teabag";
+            public static string Login { get; set; } = "";
           
             /// <summary>
             /// Create a "password.txt" file in project root and insert your hashed password - can be found in cookies on plazmaburst2.com
@@ -41,7 +41,7 @@ namespace PlazmaScript
             /// <summary>
             /// User Uid, can be found in cookies
             /// </summary>
-            public static string Uid { get; set; } = "554";
+            public static string Uid { get; set; } = "";
         }
 
         public static class Fragment
@@ -60,7 +60,7 @@ namespace PlazmaScript
             /// <summary>
             /// Whether or not the map will be automatically uploaded to the pb2 map (Map-id, and password/username must be set)
             /// </summary>
-            public static bool UploadToPb2 { get; set; } = true;
+            public static bool UploadToPb2 { get; set; } = false;
             /// <summary>
             /// Path to where the pb2 map is generated
             /// </summary>
