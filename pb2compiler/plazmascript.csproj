@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+    <PackageId>plazmascript</PackageId>
+    <Authors>Max teabag</Authors>
+    <Product>plazmascript</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="GeneratedMaps\" />
+  </ItemGroup>
+
+</Project>
