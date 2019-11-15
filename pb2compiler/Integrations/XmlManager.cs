@@ -154,7 +154,7 @@ namespace PlazmaScript
                 {
                     var xmlElement = x.CreateXmlElement();
                     xmlElement.SetAttributeValue("comp", Pb2Config.Fragment.Id);
-                    await x.CreateXmlElement().WriteToAsync(write, cancel);
+                    await xmlElement.WriteToAsync(write, cancel);
                 }
 
                 write.Close();
