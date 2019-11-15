@@ -2,7 +2,7 @@
 Generate PB2 Maps from C# and upload and combine to existing maps
 
 To get started:
-If you want to just generate an XML file and eventually upload manually after, you can just start writing in "Entrymap.cs"
+If you want to just generate an XML file and eventually upload manually after, you can just start writing in "Entrymap.cs" and run the program. Your .xml file will be generated in "GeneratedMaps" folder.
 
 
 
