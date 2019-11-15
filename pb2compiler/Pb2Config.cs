@@ -64,7 +64,7 @@ namespace PlazmaScript
             /// <summary>
             /// Path to where the pb2 map is generated
             /// </summary>
-            public static string MapPath { get; set; } = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\")) +"/GeneratedMaps/" + Fragment.Id  + ".xml";
+            public static string MapPath { get; set; } = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\")) +"/" + Fragment.Id  + ".xml";
         }
 
     }
