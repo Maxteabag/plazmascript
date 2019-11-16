@@ -124,11 +124,16 @@ namespace PlazmaScript
             return cookies;
         }
 
-        public static async Task GenerateXml(string newMap, string mapId)
+  
+        public static async Task GenerateXml(string newMap, string mapId = "")
         {
 
 
-            var originalMap = await DownloadFile("https://www.plazmaburst2.com/level_editor/map_download.php?a=load&ext=xml&r=" + mapId);
+            byte[] originalMap = null;
+            if (!string.IsNullOrWhiteSpace(mapId))
+            {
+                originalMap = await DownloadFile("https://www.plazmaburst2.com/level_editor/map_download.php?a=load&ext=xml&r=" + mapId);
+            }
 
 
             var utf8noBOM = new UTF8Encoding(false);

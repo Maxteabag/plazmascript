@@ -62,6 +62,10 @@ namespace PlazmaScript
             /// </summary>
             public static bool UploadToPb2 { get; set; } = false;
             /// <summary>
+            /// Download the content of the specificed map-id to then generate the new objects in it (Map-id and password/username must be set)
+            /// </summary>
+            public static bool DownloadFromPb2 { get; set; } = false;
+            /// <summary>
             /// Path to where the pb2 map is generated
             /// </summary>
             public static string MapPath { get; set; } = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\")) +"/GeneratedMaps/" + Fragment.Id  + ".xml";
