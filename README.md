@@ -14,5 +14,4 @@ To enable map-replacing and upload, follow these steps:
 "password.txt" will be ignore in github.
 
 
-#2) Configure settings in pb2config.
-if contributing, please do not commit pb2config
+#2) Configure settings in pb2config and follow the instructions in the comments.
