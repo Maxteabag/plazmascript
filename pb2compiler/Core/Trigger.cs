@@ -12,7 +12,7 @@ namespace PlazmaScript.Core
     {
         public Trigger Child { get; set; }
         public bool HasCreatedChild { get; set; }
-        public List<TriggerAction> Actions { get; set; }
+        public List<TriggerAction> Actions { get; private set; }
         public bool Enabled { get; set; } = true;
         public int MaxCalls { get; set; } = -1; //Infinite by default
 
