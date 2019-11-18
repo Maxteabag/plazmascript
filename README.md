@@ -15,3 +15,4 @@ To enable map-replacing and upload, follow these steps:
 
 
 #2) Configure settings in pb2config and follow the instructions in the comments.
+-> Set UploadToPb2 to true and DownloadFromPb2 to true
