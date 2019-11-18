@@ -61,15 +61,15 @@ namespace PlazmaScript
             return list;
         }
 
-        public static List<XElement> GetMapElementsExcludeComponent(string componentName, byte[] originalMap)
+        public static List<XElement> GetMapElementsExcludeFragment(string fragmentName, byte[] originalMap)
         {
 
             var map = SimpleStreamAxis(originalMap).ToList();
 
             try
             {
-                var mapComponents = map.Where(x => x.HasAttributes && x.Attribute("comp") != null && x.Attribute("comp").Value == componentName).ToList();
-                map.RemoveAll(x => x.Attribute("comp") != null && x.Attribute("comp").Value == componentName);
+                var mapComponents = map.Where(x => x.HasAttributes && x.Attribute("comp") != null && x.Attribute("comp").Value == fragmentName).ToList();
+                map.RemoveAll(x => x.Attribute("comp") != null && x.Attribute("comp").Value == fragmentName);
             }
             catch (Exception e)
             {
@@ -151,7 +151,7 @@ namespace PlazmaScript
             {
                 if (originalMap != null)
                 {
-                    var originalMapList = GetMapElementsExcludeComponent(Fragment.Id, originalMap);
+                    var originalMapList = GetMapElementsExcludeFragment(Fragment.Id, originalMap);
                      originalMapList.ForEach(async x => await x.WriteToAsync(write, cancel));
                 }
 
