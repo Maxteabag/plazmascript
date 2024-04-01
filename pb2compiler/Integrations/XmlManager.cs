@@ -91,15 +91,22 @@ namespace PlazmaScript
 
             formData.Add(new ByteArrayContent(byteArray), "uploadfile", "newMap.xml");
 
-            using (var client = new WebClientEx())
+            using (var client = new HttpClient(new HttpClientHandler() { CookieContainer = GetAuthenticationCooke() }))
             {
-
-                var authenticationCookie = GetAuthenticationCooke();
-
                 var url = "https://www.plazmaburst2.com?m=" + Pb2Config.Map.MapId + "&id=" + Pb2Config.Map.MapUid + "&uid=" + Pb2Config.Map.MapUid + "&a&s=10";
-
-
-                HttpUploadFile(url, newMapPath, "uploadfile", "application/xml", new NameValueCollection(), authenticationCookie);
+                var content = new MultipartFormDataContent();
+                var byteArray = File.ReadAllBytes(newMapPath);
+                content.Add(new ByteArrayContent(byteArray), "uploadfile", "newMap.xml");
+                var response = await client.PostAsync(url, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("Map uploaded successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Failed to upload map.");
+                }
+            }
             }
 
         }
