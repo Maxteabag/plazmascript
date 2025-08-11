@@ -319,23 +319,29 @@ namespace PlazmaScript.Core
             triggerElement.SetAttributeValue("enabled", Enabled.ToString().ToLower());
             triggerElement.SetAttributeValue("maxcalls", MaxCalls.ToString());
 
-            for (int i = 0; i < Actions.Count; i++)
+            // Always generate all 10 action slots
+            for (int i = 0; i < 10; i++)
             {
-                if (i > 10)
-                {
-                    throw new Exception("Actions on trigger exceeded 10 on " + Uid);
-                }
-                var triggerAction = Actions[i];
-
                 var actionIndex = i + 1;
-
                 var actionAttributeType = "actions_" + actionIndex + "_type";
                 var actionAttributeParameterA = "actions_" + actionIndex + "_targetA";
                 var actionAttributeParameterB = "actions_" + actionIndex + "_targetB";
 
-                triggerElement.SetAttributeValue(actionAttributeType, triggerAction.TriggerId.ToString());
-                triggerElement.SetAttributeValue(actionAttributeParameterA, triggerAction.ParameterA.ToString());
-                triggerElement.SetAttributeValue(actionAttributeParameterB, triggerAction.ParameterB.ToString());
+                if (i < Actions.Count)
+                {
+                    // Use actual action
+                    var triggerAction = Actions[i];
+                    triggerElement.SetAttributeValue(actionAttributeType, triggerAction.TriggerId.ToString());
+                    triggerElement.SetAttributeValue(actionAttributeParameterA, triggerAction.ParameterA ?? "0");
+                    triggerElement.SetAttributeValue(actionAttributeParameterB, triggerAction.ParameterB ?? "0");
+                }
+                else
+                {
+                    // Empty action slot
+                    triggerElement.SetAttributeValue(actionAttributeType, "-1");
+                    triggerElement.SetAttributeValue(actionAttributeParameterA, "0");
+                    triggerElement.SetAttributeValue(actionAttributeParameterB, "0");
+                }
             }
 
             return triggerElement;

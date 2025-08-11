@@ -11,7 +11,8 @@ namespace PlazmaScript
     {
         public MapEntry()
         {
-            var example = new CompleteMapExample();
+            // Test the ButtonDoorHouse map
+            ButtonDoorHouseMap.CreateMap();
         }
     }
 }

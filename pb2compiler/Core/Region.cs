@@ -30,8 +30,9 @@ namespace PlazmaScript.Core
     public class Region : SizedObject
     {
         public ActivationTrigger Activation { get; set; } = ActivationTrigger.NoActivation;
+        public string UseTarget { get; set; } = string.Empty;
 
-        public Region(string uid, int x, int y, int width, int height, ActivationTrigger activation = ActivationTrigger.NoActivation)
+        public Region(string uid, int x, int y, int width, int height, ActivationTrigger activation = ActivationTrigger.NoActivation, string useTarget = "")
         {
             // Automatically add # prefix if not present
             if (!uid.StartsWith("#"))
@@ -40,6 +41,7 @@ namespace PlazmaScript.Core
             }
             
             Activation = activation;
+            UseTarget = useTarget;
             
             Uid = uid;
             X = x;
@@ -62,6 +64,11 @@ namespace PlazmaScript.Core
             if (Activation != ActivationTrigger.NoActivation)
             {
                 xElement.SetAttributeValue("use_on", ((int)Activation).ToString());
+            }
+            
+            if (!string.IsNullOrEmpty(UseTarget))
+            {
+                xElement.SetAttributeValue("use_target", UseTarget);
             }
 
             return xElement;

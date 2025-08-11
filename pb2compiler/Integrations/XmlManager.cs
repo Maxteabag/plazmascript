@@ -158,7 +158,13 @@ namespace PlazmaScript
                 foreach (var x in PB2Map.MapObjects)
                 {
                     var xmlElement = x.CreateXmlElement();
-                    xmlElement.SetAttributeValue("comp", Pb2Config.Fragment.Id);
+                    
+                    // Only add comp attribute for map fragments
+                    if (!string.IsNullOrEmpty(Pb2Config.Fragment.Id))
+                    {
+                        xmlElement.SetAttributeValue("comp", Pb2Config.Fragment.Id);
+                    }
+                    
                     await xmlElement.WriteToAsync(write, cancel);
                 }
 

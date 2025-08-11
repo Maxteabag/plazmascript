@@ -49,7 +49,7 @@ namespace PlazmaScript
             /// <summary>
             /// Id for map fragment. When uploading map to existing PB2 map, it will replace all the map objects with the same fragment id
             /// </summary>
-            public static string Id { get; set; } = "a0";
+            public static string Id { get; set; } = "";  // Empty for standalone maps
         }
 
         /// <summary>
