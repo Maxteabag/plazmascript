@@ -565,19 +565,6 @@ namespace PlazmaScript.Core
         }
 
         /// <summary>
-        /// Move this region to player-initiator's cursor
-        /// </summary>
-        public TriggerAction MoveToPlayerInitiatorCursor()
-        {
-            return new TriggerAction
-            {
-                ParameterA = Uid,
-                ParameterB = "-1",
-                TriggerId = 87
-            };
-        }
-
-        /// <summary>
         /// Continue execution of this trigger only if tracing from center of this region to center of target region is possible
         /// </summary>
         /// <param name="targetRegion">The target region to trace to</param>
@@ -616,6 +603,34 @@ namespace PlazmaScript.Core
                 ParameterA = Uid,
                 ParameterB = moveable.Uid,
                 TriggerId = 98
+            };
+        }
+
+        /// <summary>
+        /// Move this region to cursor of player
+        /// </summary>
+        /// <param name="player">Player to get cursor position from</param>
+        public TriggerAction MoveToCursorOfPlayer(Player player)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = player.Uid,
+                TriggerId = 259
+            };
+        }
+
+        /// <summary>
+        /// Play sound at this Region (volume and stereo effect won't be updated once sound starts)
+        /// </summary>
+        /// <param name="soundName">Name of the sound to play</param>
+        public TriggerAction PlaySound(string soundName)
+        {
+            return new TriggerAction
+            {
+                ParameterA = soundName,
+                ParameterB = Uid,
+                TriggerId = 284
             };
         }
 

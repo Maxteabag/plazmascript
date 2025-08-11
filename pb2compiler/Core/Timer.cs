@@ -130,5 +130,33 @@ namespace PlazmaScript.Core
                 TriggerId = 44
             };
         }
+
+        /// <summary>
+        /// Set the frequency of calls of this Timer to variable
+        /// </summary>
+        /// <param name="frequencyVariable">Variable containing new frequency</param>
+        public TriggerAction SetFrequency(Variable frequencyVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = frequencyVariable.Name,
+                TriggerId = 367
+            };
+        }
+
+        /// <summary>
+        /// Set variable to time elapsed of this Timer
+        /// </summary>
+        /// <param name="resultVariable">Variable to store elapsed time</param>
+        public TriggerAction GetElapsedTime(Variable resultVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = Uid,
+                TriggerId = 454
+            };
+        }
     }
 }

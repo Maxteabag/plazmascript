@@ -140,7 +140,7 @@ namespace PlazmaScript.Examples
 
             for (int i = 2; i < 10; i++)
             {
-                var gun = new Gun(Gun.GunModel.InvisibleGun);
+                var gun = new Gun(GunModel.InvisibleGun);
                 var weHaveGunSlot = new Variable("hasSlot_" + i);
                 allGunSlotData.Add(new GunSlotData
                 {

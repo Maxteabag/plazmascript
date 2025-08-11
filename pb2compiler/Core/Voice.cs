@@ -3,7 +3,7 @@ using System.Xml.Linq;
 namespace PlazmaScript.Core
 {
     //TODO: Verify actual XML structure for Voice objects
-    public class Voice : MapObject
+    public class Voice : LinkedObject
     {
         public Voice()
         {

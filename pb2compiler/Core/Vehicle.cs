@@ -64,6 +64,47 @@ namespace PlazmaScript.Core
             };
         }
 
+        /// <summary>
+        /// Enable or disable visibility of this Vehicle
+        /// </summary>
+        /// <param name="visible">1 to enable visibility, 0 to disable</param>
+        public TriggerAction SetVisibility(int visible)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = visible.ToString(),
+                TriggerId = 438
+            };
+        }
+
+        /// <summary>
+        /// Call Trigger when this Vehicle is destroyed
+        /// </summary>
+        /// <param name="trigger">Trigger to call when destroyed</param>
+        public TriggerAction CallTriggerOnDestroyed(Trigger trigger)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = trigger.Uid,
+                TriggerId = 439
+            };
+        }
+
+        /// <summary>
+        /// Change this Vehicle nickname to variable
+        /// </summary>
+        /// <param name="nicknameVariable">Variable containing new nickname</param>
+        public TriggerAction SetNickname(Variable nicknameVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = nicknameVariable.Name,
+                TriggerId = 476
+            };
+        }
 
         public override XElement CreateXmlElement()
         {

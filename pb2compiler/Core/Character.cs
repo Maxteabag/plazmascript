@@ -57,7 +57,7 @@ namespace PlazmaScript.Core
         /// Set the character's hit points to a percentage (0-100)
         /// </summary>
         /// <param name="percentage">Hit points percentage</param>
-        public TriggerAction SetHitPoints(int percentage)
+        public TriggerAction SetHitPointsPercentage(int percentage)
         {
             return new TriggerAction
             {
@@ -840,6 +840,505 @@ namespace PlazmaScript.Core
                 ParameterA = Uid,
                 ParameterB = speedVariable.Name,
                 TriggerId = 430
+            };
+        }
+
+        /// <summary>
+        /// Set X speed of Character slot-value variable to value of variable
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="speedVariable">Variable containing X speed value</param>
+        public static TriggerAction SetCharacterSlotXSpeed(Variable slotVariable, Variable speedVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = speedVariable.Name,
+                TriggerId = 431
+            };
+        }
+
+        /// <summary>
+        /// Set Y speed of Character slot-value variable to value of variable
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="speedVariable">Variable containing Y speed value</param>
+        public static TriggerAction SetCharacterSlotYSpeed(Variable slotVariable, Variable speedVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = speedVariable.Name,
+                TriggerId = 432
+            };
+        }
+
+        /// <summary>
+        /// Set variable to 1 if this character is dying (variable becomes 0 in else case)
+        /// </summary>
+        /// <param name="resultVariable">Variable to store the result</param>
+        public TriggerAction CheckIfDying(Variable resultVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = Uid,
+                TriggerId = 314
+            };
+        }
+
+        /// <summary>
+        /// Set variable to 1 if Character-initiator is dying (variable becomes 0 in else case)
+        /// </summary>
+        /// <param name="resultVariable">Variable to store the result</param>
+        public static TriggerAction CheckIfInitiatorDying(Variable resultVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = "-1",
+                TriggerId = 315
+            };
+        }
+
+        /// <summary>
+        /// Set variable to 1 if Character-killer is dying (variable becomes 0 in else case)
+        /// </summary>
+        /// <param name="resultVariable">Variable to store the result</param>
+        public static TriggerAction CheckIfKillerDying(Variable resultVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = "-1",
+                TriggerId = 316
+            };
+        }
+
+        /// <summary>
+        /// Set variable to 1 if Character slot-value variable is dying
+        /// </summary>
+        /// <param name="resultVariable">Variable to store the result</param>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        public static TriggerAction CheckIfCharacterSlotDying(Variable resultVariable, Variable slotVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = slotVariable.Name,
+                TriggerId = 544
+            };
+        }
+
+        /// <summary>
+        /// Change Character slot-value variable nickname to variable
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="nicknameVariable">Variable containing new nickname</param>
+        public static TriggerAction SetCharacterSlotNickname(Variable slotVariable, Variable nicknameVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = nicknameVariable.Name,
+                TriggerId = 518
+            };
+        }
+
+        /// <summary>
+        /// Change Character nickname to variable value
+        /// </summary>
+        /// <param name="nicknameVariable">Variable containing new nickname</param>
+        public TriggerAction SetNickname(Variable nicknameVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = nicknameVariable.Name,
+                TriggerId = 455
+            };
+        }
+
+
+        /// <summary>
+        /// Change Character zoom multiplier
+        /// </summary>
+        /// <param name="zoomVariable">Variable containing zoom multiplier</param>
+        public TriggerAction SetZoomMultiplier(Variable zoomVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = zoomVariable.Name,
+                TriggerId = 368
+            };
+        }
+
+        /// <summary>
+        /// Set Character slot-value variable Health bar GUI opacity to value
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="opacity">Opacity value</param>
+        public static TriggerAction SetCharacterSlotHealthBarOpacity(Variable slotVariable, int opacity)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = opacity.ToString(),
+                TriggerId = 448
+            };
+        }
+
+        /// <summary>
+        /// Set Character slot-value variable Health bar GUI opacity to variable
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="opacityVariable">Variable containing opacity value</param>
+        public static TriggerAction SetCharacterSlotHealthBarOpacity(Variable slotVariable, Variable opacityVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = opacityVariable.Name,
+                TriggerId = 449
+            };
+        }
+
+        /// <summary>
+        /// Change Character slot-value variable sword life to variable
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="swordLifeVariable">Variable containing sword life value</param>
+        public static TriggerAction SetCharacterSlotSwordLife(Variable slotVariable, Variable swordLifeVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = swordLifeVariable.Name,
+                TriggerId = 452
+            };
+        }
+
+        /// <summary>
+        /// Set disabling of Character slot-value variable psi swords to parameter
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="disable">1 to disable, 0 to enable</param>
+        public static TriggerAction SetCharacterSlotPsiSwordsDisabled(Variable slotVariable, int disable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = disable.ToString(),
+                TriggerId = 459
+            };
+        }
+
+        /// <summary>
+        /// Set Character slot-value variable current and max hit points to variable
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="hitPointsVariable">Variable containing hit points value</param>
+        public static TriggerAction SetCharacterSlotHitPoints(Variable slotVariable, Variable hitPointsVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = hitPointsVariable.Name,
+                TriggerId = 465
+            };
+        }
+
+        /// <summary>
+        /// Set Character slot-value variable current and max hit points to value
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="hitPoints">Hit points value</param>
+        public static TriggerAction SetCharacterSlotHitPoints(Variable slotVariable, int hitPoints)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = hitPoints.ToString(),
+                TriggerId = 498
+            };
+        }
+
+        /// <summary>
+        /// Save shoot intention of Character slot-value variable to variable
+        /// </summary>
+        /// <param name="resultVariable">Variable to store shoot intention</param>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        public static TriggerAction SaveCharacterSlotShootIntention(Variable resultVariable, Variable slotVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = slotVariable.Name,
+                TriggerId = 495
+            };
+        }
+
+        /// <summary>
+        /// Save horizontal movement intention of Character slot-value variable to variable
+        /// </summary>
+        /// <param name="resultVariable">Variable to store horizontal movement intention</param>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        public static TriggerAction SaveCharacterSlotHorizontalMovement(Variable resultVariable, Variable slotVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = slotVariable.Name,
+                TriggerId = 496
+            };
+        }
+
+        /// <summary>
+        /// Save vertical movement intention of Character slot-value variable to variable
+        /// </summary>
+        /// <param name="resultVariable">Variable to store vertical movement intention</param>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        public static TriggerAction SaveCharacterSlotVerticalMovement(Variable resultVariable, Variable slotVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = slotVariable.Name,
+                TriggerId = 497
+            };
+        }
+
+        /// <summary>
+        /// Disallow weapon drop for Character slot-value variable
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        public static TriggerAction DisallowCharacterSlotWeaponDrop(Variable slotVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = "-1",
+                TriggerId = 547
+            };
+        }
+
+        /// <summary>
+        /// Allow weapon drop for Character slot-value variable
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        public static TriggerAction AllowCharacterSlotWeaponDrop(Variable slotVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = "-1",
+                TriggerId = 548
+            };
+        }
+
+        /// <summary>
+        /// Set disabling of Character slot-value variable psi swords to parameter
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="disable">1 to disable, 0 to enable</param>
+        public static TriggerAction SetCharacterSlotPsiSwordsDisabled(Variable slotVariable, string disable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = disable,
+                TriggerId = 549
+            };
+        }
+
+        /// <summary>
+        /// Set Character slot-value variable active weapon to slot
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="weaponSlot">Weapon slot number</param>
+        public static TriggerAction SetCharacterSlotActiveWeaponSlot(Variable slotVariable, int weaponSlot)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = weaponSlot.ToString(),
+                TriggerId = 551
+            };
+        }
+
+        /// <summary>
+        /// Set variable to active weapon of Character slot-value variable
+        /// </summary>
+        /// <param name="resultVariable">Variable to store active weapon</param>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        public static TriggerAction GetCharacterSlotActiveWeapon(Variable resultVariable, Variable slotVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = slotVariable.Name,
+                TriggerId = 552
+            };
+        }
+
+        /// <summary>
+        /// Make Character slot-value variable drop Gun
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="gun">Gun to drop</param>
+        public static TriggerAction MakeCharacterSlotDropGun(Variable slotVariable, Gun gun)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = gun.Uid,
+                TriggerId = 553
+            };
+        }
+
+        /// <summary>
+        /// Change Character slot-value variable sword life to variable
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="swordLifeVariable">Variable containing sword life value</param>
+        public static TriggerAction ChangeCharacterSlotSwordLife(Variable slotVariable, Variable swordLifeVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = swordLifeVariable.Name,
+                TriggerId = 554
+            };
+        }
+
+        /// <summary>
+        /// Move Character slot-value variable to random place in Region
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="region">Target region</param>
+        public static TriggerAction MoveCharacterSlotToRandomPlace(Variable slotVariable, Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = region.Uid,
+                TriggerId = 556
+            };
+        }
+
+        /// <summary>
+        /// Teleport Character slot-value variable to Region and invert speed by X axis
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="region">Target region</param>
+        public static TriggerAction TeleportCharacterSlotWithSpeedInvert(Variable slotVariable, Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = region.Uid,
+                TriggerId = 557
+            };
+        }
+
+        /// <summary>
+        /// Teleport Character slot-value variable to Region
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="region">Target region</param>
+        public static TriggerAction TeleportCharacterSlot(Variable slotVariable, Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = region.Uid,
+                TriggerId = 558
+            };
+        }
+
+        /// <summary>
+        /// Silently teleport Character slot-value variable to Region
+        /// </summary>
+        /// <param name="slotVariable">Variable containing character slot</param>
+        /// <param name="region">Target region</param>
+        public static TriggerAction SilentlyTeleportCharacterSlot(Variable slotVariable, Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = slotVariable.Name,
+                ParameterB = region.Uid,
+                TriggerId = 559
+            };
+        }
+
+        /// <summary>
+        /// Apply damage-over-time effect to player-initiator with power and duration
+        /// </summary>
+        /// <param name="power">Damage power</param>
+        /// <param name="duration">Duration (30 duration = 1 second)</param>
+        public static TriggerAction ApplyDamageOverTimeToInitiator(int power, int duration)
+        {
+            return new TriggerAction
+            {
+                ParameterA = power.ToString(),
+                ParameterB = duration.ToString(),
+                TriggerId = 281
+            };
+        }
+
+        /// <summary>
+        /// Remove all effects from player-initiator
+        /// </summary>
+        public static TriggerAction RemoveAllEffectsFromInitiator()
+        {
+            return new TriggerAction
+            {
+                ParameterA = "-1",
+                ParameterB = "-1",
+                TriggerId = 282
+            };
+        }
+
+        /// <summary>
+        /// Spawn damage particles of this Character at the center of Region
+        /// </summary>
+        /// <param name="region">Region to spawn particles at</param>
+        public TriggerAction SpawnDamageParticles(Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = region.Uid,
+                TriggerId = 283
+            };
+        }
+
+        /// <summary>
+        /// Change this Character nametag text to variable
+        /// </summary>
+        /// <param name="nametagVariable">Variable containing nametag text</param>
+        public TriggerAction SetNametagText(Variable nametagVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = nametagVariable.Name,
+                TriggerId = 456
+            };
+        }
+
+        /// <summary>
+        /// Set Character color pattern to string-value of variable (4 small letters for each limb)
+        /// </summary>
+        /// <param name="colorPatternVariable">Variable containing color pattern</param>
+        public TriggerAction SetColorPattern(Variable colorPatternVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = colorPatternVariable.Name,
+                TriggerId = 290
             };
         }
 

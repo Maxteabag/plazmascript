@@ -15,7 +15,7 @@ namespace PlazmaScript.Examples
             var player = new Character("player1", 100, 200);
             var enemy = new Character("enemy1", 500, 200);
             var vehicle = new Vehicle("walker1", 300, 180, VehicleModel.Walker, VehicleSide.Blue);
-            var gun = new Gun(Gun.GunModel.InvisibleGun);
+            var gun = new Gun(GunModel.InvisibleGun);
 
             // Create regions
             var spawnArea = new Region("spawn", 50, 150, 200, 100);

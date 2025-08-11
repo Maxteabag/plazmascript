@@ -320,6 +320,62 @@ namespace PlazmaScript.Core
             };
         }
 
+        /// <summary>
+        /// Mask this Decoration with another Decoration (Flash Player only)
+        /// </summary>
+        /// <param name="maskDecoration">Decoration to use as mask</param>
+        public TriggerAction MaskWithDecoration(Decoration maskDecoration)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = maskDecoration.Uid,
+                TriggerId = 293
+            };
+        }
+
+        /// <summary>
+        /// Set this decoration visibility multiplier to value (0...1)
+        /// </summary>
+        /// <param name="visibility">Visibility multiplier (0...1)</param>
+        public TriggerAction SetVisibilityMultiplier(double visibility)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = visibility.ToString(),
+                TriggerId = 298
+            };
+        }
+
+        /// <summary>
+        /// Set this decoration visibility multiplier to value of variable (0...1)
+        /// </summary>
+        /// <param name="visibilityVariable">Variable containing visibility multiplier</param>
+        public TriggerAction SetVisibilityMultiplier(Variable visibilityVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = visibilityVariable.Name,
+                TriggerId = 299
+            };
+        }
+
+        /// <summary>
+        /// Move, rotate and flip this Decoration to position of Gun
+        /// </summary>
+        /// <param name="gun">Gun to align with</param>
+        public TriggerAction AlignWithGun(Gun gun)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = gun.Uid,
+                TriggerId = 300
+            };
+        }
+
         public override XElement CreateXmlElement()
         {
             var decorationElement = new XElement("decoration");

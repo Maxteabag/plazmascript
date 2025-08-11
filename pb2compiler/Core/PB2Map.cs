@@ -1692,6 +1692,142 @@ namespace PlazmaScript.Core
             };
         }
 
+        /// <summary>
+        /// Continue trigger actions execution only if loading of custom images has been finished
+        /// </summary>
+        public static TriggerAction ContinueIfCustomImagesLoaded()
+        {
+            return new TriggerAction
+            {
+                ParameterA = "-1",
+                ParameterB = "-1",
+                TriggerId = 275
+            };
+        }
+
+        /// <summary>
+        /// Continue trigger actions execution only if all custom images have been successfully loaded
+        /// </summary>
+        public static TriggerAction ContinueIfAllCustomImagesLoaded()
+        {
+            return new TriggerAction
+            {
+                ParameterA = "-1",
+                ParameterB = "-1",
+                TriggerId = 276
+            };
+        }
+
+        /// <summary>
+        /// Save current number of loaded custom images to variable
+        /// </summary>
+        /// <param name="resultVariable">Variable to store loaded custom images count</param>
+        public static TriggerAction GetLoadedCustomImagesCount(Variable resultVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = "-1",
+                TriggerId = 277
+            };
+        }
+
+        /// <summary>
+        /// Save number of expected custom images on current level to variable
+        /// </summary>
+        /// <param name="resultVariable">Variable to store expected custom images count</param>
+        public static TriggerAction GetExpectedCustomImagesCount(Variable resultVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = resultVariable.Name,
+                ParameterB = "-1",
+                TriggerId = 278
+            };
+        }
+
+        /// <summary>
+        /// Reward player with experience points for level completion (singleplayer)
+        /// </summary>
+        public static TriggerAction RewardPlayerExperience()
+        {
+            return new TriggerAction
+            {
+                ParameterA = "-1",
+                ParameterB = "-1",
+                TriggerId = 285
+            };
+        }
+
+        /// <summary>
+        /// Reward player-initiator with experience points for level completion (multiplayer)
+        /// </summary>
+        public static TriggerAction RewardInitiatorExperience()
+        {
+            return new TriggerAction
+            {
+                ParameterA = "-1",
+                ParameterB = "-1",
+                TriggerId = 286
+            };
+        }
+
+        /// <summary>
+        /// Bind Trigger execution to key press event
+        /// </summary>
+        /// <param name="trigger">Trigger to bind</param>
+        /// <param name="keyName">Name of the key</param>
+        public static TriggerAction BindTriggerToKeyPress(Trigger trigger, string keyName)
+        {
+            return new TriggerAction
+            {
+                ParameterA = trigger.Uid,
+                ParameterB = keyName,
+                TriggerId = 288
+            };
+        }
+
+        /// <summary>
+        /// Bind Trigger execution to key release event
+        /// </summary>
+        /// <param name="trigger">Trigger to bind</param>
+        /// <param name="keyName">Name of the key</param>
+        public static TriggerAction BindTriggerToKeyRelease(Trigger trigger, string keyName)
+        {
+            return new TriggerAction
+            {
+                ParameterA = trigger.Uid,
+                ParameterB = keyName,
+                TriggerId = 289
+            };
+        }
+
+        /// <summary>
+        /// Disable automatic disabling of offscreen entities
+        /// </summary>
+        public static TriggerAction DisableOffscreenEntityDisabling()
+        {
+            return new TriggerAction
+            {
+                ParameterA = "-1",
+                ParameterB = "-1",
+                TriggerId = 291
+            };
+        }
+
+        /// <summary>
+        /// Enable automatic disabling of offscreen entities
+        /// </summary>
+        public static TriggerAction EnableOffscreenEntityDisabling()
+        {
+            return new TriggerAction
+            {
+                ParameterA = "-1",
+                ParameterB = "-1",
+                TriggerId = 292
+            };
+        }
+
 
     }
 }

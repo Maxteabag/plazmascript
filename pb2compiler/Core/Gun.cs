@@ -6,12 +6,111 @@ using static PlazmaScript.Program;
 
 namespace PlazmaScript.Core
 {
+    public enum GunModel
+    {
+        AssaultRifleC01r,
+        AssaultRifleC01rRed,
+        PistolC01p,
+        PistolC01pRed,
+        PistolCSPro,
+        VehicleRocketLauncherCorvette,
+        GrenadeLauncherCSSpamThemBaby,
+        RocketLauncherCSLitBro,
+        LiteRailgunV01CSHShot,
+        HeavyRailgunV04CSOneSOneK,
+        ShotgunC01s,
+        ShotgunC01sBlue,
+        AlienPistol,
+        AlienRifle,
+        AlienShotgun,
+        VehicleCannonHoundWalkerCS,
+        Defibrillator,
+        CSBNG,
+        RayGunC01y,
+        RayRifleTCoRR,
+        VehicleMinigunDrone,
+        VehicleGrenadeLauncherDrone,
+        ShotgunCSDAZ,
+        AssaultRifleCSRC,
+        CombatRifleCSO,
+        PlasmagunCSBloom,
+        MinigunC02m,
+        DroneGunCSVirus,
+        SniperRifleCSYippeeKiYay,
+        GrenadeC00n,
+        TeleportGrenadeV03CSPortNade,
+        PortableShieldV07CSQuarium,
+        PortableShieldV07CSQuariumWeapon,
+        GlockUnfinished,
+        M4A1Unfinished,
+        StarDefenderRifle,
+        StarDefenderRocketLauncher,
+        CPAssaultRifleDarkstar1,
+        CSGaussRifleDarkstar1,
+        LightMachineGunCSLMGDarkstar1,
+        PHANX92FalconetDarkstar1,
+        AlienSniperRifleDarkstar1,
+        AssaultRifleAV135Lostmydollar,
+        NeedleLostmydollar,
+        QCcV50LittleBastardLostmydollar,
+        RMK36Lostmydollar,
+        RPGLostmydollar,
+        AlienLaserRifleLazyRain,
+        AlienHeaterRifleLazyRain,
+        CSAutocannonLazyRainVehicle,
+        CSAutocannonLazyRainHandheld,
+        CrossfireCR45PhantomMoonhawk,
+        CrossfireCR45PhantomDarkMoonhawk,
+        CrossfireCR42GhostMoonhawk,
+        EnergyRifleDitzy,
+        FalkonianMarksmanRifleRoxxar,
+        FalkonianPistolRoxxar,
+        FalkonianShotgunRoxxar,
+        FalkonianGrenadeLauncherRoxxar,
+        CrossfireCR145VortexMoonhawk,
+        FalkonianPSICutterLazyRain,
+        AndroidSniperRifleMrJaksNes,
+        OEDACR30RifleIncompetence,
+        HeavySniperRifleRQ10Darkstar1,
+        PBFTTPVehicleCannon,
+        ShotgunNXS25Thetoppestkek,
+        Archetype27XXIncompetence,
+        MarksmanRifleCSRMPhsc,
+        CrossfireCR34MarauderBrightMoonhawk,
+        CrossfireCR34MarauderDarkMoonhawk,
+        MedicPistolLazyRain,
+        GrenadeLauncherCSGLHFIncompetence,
+        OEDAEA109HLauncherIncompetence,
+        FalkonianAntiGravityRocketLauncherYellowLazyRain,
+        FalkonianAntiGravityRocketLauncherRedLazyRain,
+        RocketLauncherCSBarrageDarkstar1,
+        PlasmaShotgunPhsc,
+        AndroidShotgunPhsc,
+        AssaultRifleCSIKDitzy,
+        AssaultRifleNXR17CDitzy,
+        CrossfireCR54ViperPhsc,
+        CrossfireCR54ViperV2Phsc,
+        PHANX230CobraDarkstar1,
+        EosToxicRailgunDarkstar1,
+        AlienRailShotgunDarkstar1,
+        GrenadeLauncherC00tDarkstar1,
+        GrenadeLauncherC00tRedDarkstar1,
+        EosRocketLauncherDarkstar1,
+        PHANX150BisonDarkstar1,
+        EosAutoShotgunDarkstar1,
+        ReakhoshshaFocusBeamDitzy,
+        RevolverMK1Boom5,
+        ScavengerShotgunThetoppestkek,
+        AlienAcidGrenadeLauncherLazyRain,
+        AlienPlasmaPistolWhiteLazyRain,
+        AlienPlasmaPistolYellowLazyRain,
+        AndroidRailgunRoxxar,
+        InvisibleGun,
+        SharkDoesNothing
+    }
+
     public class Gun : LinkedObject
     {
-        public enum GunModel
-        {
-            InvisibleGun
-        }
         public enum GunTeam
         {
             Any
@@ -28,21 +127,128 @@ namespace PlazmaScript.Core
             PB2Map.MapObjects.Add(this);
         }
 
+        /// <summary>
+        /// Get the string identifier for a gun model
+        /// </summary>
+        /// <param name="model">Gun model</param>
+        /// <returns>String identifier used in the game</returns>
+        public static string GetGunModelString(GunModel model)
+        {
+            var gunModelDictionary = new Dictionary<GunModel, string> {
+                { GunModel.AssaultRifleC01r, "gun_rifle" },
+                { GunModel.AssaultRifleC01rRed, "gun_rifle_b" },
+                { GunModel.PistolC01p, "gun_pistol" },
+                { GunModel.PistolC01pRed, "gun_pistol_b" },
+                { GunModel.PistolCSPro, "gun_pistol2" },
+                { GunModel.VehicleRocketLauncherCorvette, "gun_vehgun" },
+                { GunModel.GrenadeLauncherCSSpamThemBaby, "gun_gl" },
+                { GunModel.RocketLauncherCSLitBro, "gun_rl" },
+                { GunModel.LiteRailgunV01CSHShot, "gun_railgun" },
+                { GunModel.HeavyRailgunV04CSOneSOneK, "gun_railgun2" },
+                { GunModel.ShotgunC01s, "gun_shotgun" },
+                { GunModel.ShotgunC01sBlue, "gun_shotgun_b" },
+                { GunModel.AlienPistol, "gun_apistol" },
+                { GunModel.AlienRifle, "gun_arifle" },
+                { GunModel.AlienShotgun, "gun_arifle2" },
+                { GunModel.VehicleCannonHoundWalkerCS, "gun_vehcannon" },
+                { GunModel.Defibrillator, "gun_defibrillator" },
+                { GunModel.CSBNG, "gun_bfg" },
+                { GunModel.RayGunC01y, "gun_raygun" },
+                { GunModel.RayRifleTCoRR, "gun_rayrifle" },
+                { GunModel.VehicleMinigunDrone, "gun_vehminigun" },
+                { GunModel.VehicleGrenadeLauncherDrone, "gun_vehminigl" },
+                { GunModel.ShotgunCSDAZ, "gun_real_shotgun" },
+                { GunModel.AssaultRifleCSRC, "gun_real_rifle" },
+                { GunModel.CombatRifleCSO, "gun_oicw" },
+                { GunModel.PlasmagunCSBloom, "gun_plasmagun" },
+                { GunModel.MinigunC02m, "gun_minigun" },
+                { GunModel.DroneGunCSVirus, "gun_vgun" },
+                { GunModel.SniperRifleCSYippeeKiYay, "gun_sniper" },
+                { GunModel.GrenadeC00n, "item_grenade" },
+                { GunModel.TeleportGrenadeV03CSPortNade, "item_port" },
+                { GunModel.PortableShieldV07CSQuarium, "item_shield" },
+                { GunModel.PortableShieldV07CSQuariumWeapon, "gun_sp_sh" },
+                { GunModel.GlockUnfinished, "gun_glock" },
+                { GunModel.M4A1Unfinished, "gun_m4a1" },
+                { GunModel.StarDefenderRifle, "gun_pixel_rifle" },
+                { GunModel.StarDefenderRocketLauncher, "gun_pixel_rl" },
+                { GunModel.CPAssaultRifleDarkstar1, "darkstar_1_assault_rifle" },
+                { GunModel.CSGaussRifleDarkstar1, "darkstar_1_gauss_rifle" },
+                { GunModel.LightMachineGunCSLMGDarkstar1, "darkstar_1_minigun" },
+                { GunModel.PHANX92FalconetDarkstar1, "darkstar_1_phanx_rifle" },
+                { GunModel.AlienSniperRifleDarkstar1, "darkstar_1_usniper" },
+                { GunModel.AssaultRifleAV135Lostmydollar, "lostmydollar_av135" },
+                { GunModel.NeedleLostmydollar, "lostmydollar_needle" },
+                { GunModel.QCcV50LittleBastardLostmydollar, "lostmydollar_qccv50" },
+                { GunModel.RMK36Lostmydollar, "lostmydollar_rmk36" },
+                { GunModel.RPGLostmydollar, "lostmydollar_rpg" },
+                { GunModel.AlienLaserRifleLazyRain, "lazyrain_alien_laser_rifle" },
+                { GunModel.AlienHeaterRifleLazyRain, "lazyrain_alien_laser_rifle2" },
+                { GunModel.CSAutocannonLazyRainVehicle, "lazyrain_cannon" },
+                { GunModel.CSAutocannonLazyRainHandheld, "lazyrain_cannon2" },
+                { GunModel.CrossfireCR45PhantomMoonhawk, "moonhawk_phantom" },
+                { GunModel.CrossfireCR45PhantomDarkMoonhawk, "moonhawk_phantom2" },
+                { GunModel.CrossfireCR42GhostMoonhawk, "moonhawk_smg" },
+                { GunModel.EnergyRifleDitzy, "ditzy_energy_rifle" },
+                { GunModel.FalkonianMarksmanRifleRoxxar, "roxxar_marksman_rifle" },
+                { GunModel.FalkonianPistolRoxxar, "roxxar_pistol" },
+                { GunModel.FalkonianShotgunRoxxar, "roxxar_rifle" },
+                { GunModel.FalkonianGrenadeLauncherRoxxar, "roxxar_shotgun" },
+                { GunModel.CrossfireCR145VortexMoonhawk, "moonhawk_crossfire" },
+                { GunModel.FalkonianPSICutterLazyRain, "lazyrain_psi_cutter" },
+                { GunModel.AndroidSniperRifleMrJaksNes, "mrjaksnes_android_sniper" },
+                { GunModel.OEDACR30RifleIncompetence, "incompetence_cr30" },
+                { GunModel.HeavySniperRifleRQ10Darkstar1, "darkstar_1_cs_ragequit" },
+                { GunModel.PBFTTPVehicleCannon, "gun_fttp_vehgun" },
+                { GunModel.ShotgunNXS25Thetoppestkek, "thetoppestkek_shotgun_nxs25" },
+                { GunModel.Archetype27XXIncompetence, "incompetence_archetype_27xx" },
+                { GunModel.MarksmanRifleCSRMPhsc, "phsc_aug" },
+                { GunModel.CrossfireCR34MarauderBrightMoonhawk, "moonhawk_railgun" },
+                { GunModel.CrossfireCR34MarauderDarkMoonhawk, "moonhawk_railgun2" },
+                { GunModel.MedicPistolLazyRain, "lazyrain_heal_pistol" },
+                { GunModel.GrenadeLauncherCSGLHFIncompetence, "incompetence_glhf" },
+                { GunModel.OEDAEA109HLauncherIncompetence, "incompetence_glhf2" },
+                { GunModel.FalkonianAntiGravityRocketLauncherYellowLazyRain, "lazyrain_gravy_rl" },
+                { GunModel.FalkonianAntiGravityRocketLauncherRedLazyRain, "lazyrain_gravy_rl2" },
+                { GunModel.RocketLauncherCSBarrageDarkstar1, "darkstar_1_owo_rl" },
+                { GunModel.PlasmaShotgunPhsc, "phsc_plasma_shotgun" },
+                { GunModel.AndroidShotgunPhsc, "phsc_android_shotgun" },
+                { GunModel.AssaultRifleCSIKDitzy, "ditzy_cs_ik" },
+                { GunModel.AssaultRifleNXR17CDitzy, "ditzy_cs_ik2" },
+                { GunModel.CrossfireCR54ViperPhsc, "phsc_ph01" },
+                { GunModel.CrossfireCR54ViperV2Phsc, "phsc_ph01b" },
+                { GunModel.PHANX230CobraDarkstar1, "darkstar_1_railgun" },
+                { GunModel.EosToxicRailgunDarkstar1, "darkstar_1_railgun2" },
+                { GunModel.AlienRailShotgunDarkstar1, "darkstar_1_alien_rail_sg" },
+                { GunModel.GrenadeLauncherC00tDarkstar1, "darkstar_1_nade_c9" },
+                { GunModel.GrenadeLauncherC00tRedDarkstar1, "darkstar_1_nade_c9b" },
+                { GunModel.EosRocketLauncherDarkstar1, "darkstar_1_rl" },
+                { GunModel.PHANX150BisonDarkstar1, "darkstar_1_bison" },
+                { GunModel.EosAutoShotgunDarkstar1, "darkstar_1_auto_sg" },
+                { GunModel.ReakhoshshaFocusBeamDitzy, "ditzy_focus_beam" },
+                { GunModel.RevolverMK1Boom5, "boom5_revolver" },
+                { GunModel.ScavengerShotgunThetoppestkek, "thetoppestkek_scavenger_sg" },
+                { GunModel.AlienAcidGrenadeLauncherLazyRain, "lazyrain_acid_gl" },
+                { GunModel.AlienPlasmaPistolWhiteLazyRain, "lazyrain_plasma_smg" },
+                { GunModel.AlienPlasmaPistolYellowLazyRain, "lazyrain_plasma_smg2" },
+                { GunModel.AndroidRailgunRoxxar, "roxxar_android_railgun" },
+                { GunModel.InvisibleGun, "gun_invisgun" },
+                { GunModel.SharkDoesNothing, "gun_sharkgun" }
+            };
+
+            return gunModelDictionary.TryGetValue(model, out string value) ? value : "gun_rifle";
+        }
+
         public override XElement CreateXmlElement()
         {
             var element = new XElement("gun");
-
-            //TODO: More guns?
-            var gunModelDictionary = new Dictionary<GunModel, string> {
-                { GunModel.InvisibleGun, "gun_invisgun" },
-            };
 
             //TODO: More teams?
             var gunTeamDictionary = new Dictionary<GunTeam, string> {
                 { GunTeam.Any, "-1" },
             };
 
-            var gunModel = gunModelDictionary[Model];
+            var gunModel = GetGunModelString(Model);
             var gunTeam = gunTeamDictionary[Team];
 
             element.SetAttributeValue("uid", Uid);
@@ -128,15 +334,6 @@ namespace PlazmaScript.Core
             };
         }
 
-        internal TriggerAction SetSlot(int value)
-        {
-            return new TriggerAction
-            {
-                ParameterA = Uid,
-                ParameterB = value.ToString(),
-                TriggerId = 78
-            };
-        }
 
         /// <summary>
         /// Force this gun to spawn specific number of projectiles per shot
@@ -592,6 +789,118 @@ namespace PlazmaScript.Core
                 ParameterA = Uid,
                 ParameterB = subtractedSpread.ToString(),
                 TriggerId = 239
+            };
+        }
+
+        /// <summary>
+        /// Set this gun's projectile scale to value
+        /// </summary>
+        /// <param name="scale">Projectile scale value</param>
+        public TriggerAction SetProjectileScale(double scale)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = scale.ToString(),
+                TriggerId = 301
+            };
+        }
+
+        /// <summary>
+        /// Set this gun's projectile scale to value of variable
+        /// </summary>
+        /// <param name="scaleVariable">Variable containing projectile scale</param>
+        public TriggerAction SetProjectileScale(Variable scaleVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = scaleVariable.Name,
+                TriggerId = 302
+            };
+        }
+
+        /// <summary>
+        /// Set this gun's arm 1 hold offset (0..1)
+        /// </summary>
+        /// <param name="offset">Arm 1 hold offset (0..1)</param>
+        public TriggerAction SetArm1HoldOffset(double offset)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = offset.ToString(),
+                TriggerId = 303
+            };
+        }
+
+        /// <summary>
+        /// Set this gun's arm 2 hold offset (0..1)
+        /// </summary>
+        /// <param name="offset">Arm 2 hold offset (0..1)</param>
+        public TriggerAction SetArm2HoldOffset(double offset)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = offset.ToString(),
+                TriggerId = 304
+            };
+        }
+
+        /// <summary>
+        /// Set this gun's holstered attachment (0 = on leg, 1 = on back)
+        /// </summary>
+        /// <param name="attachment">Attachment type (0 = on leg, 1 = on back)</param>
+        public TriggerAction SetHolsteredAttachment(int attachment)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = attachment.ToString(),
+                TriggerId = 305
+            };
+        }
+
+        /// <summary>
+        /// Set this gun's length to value
+        /// </summary>
+        /// <param name="length">Gun length value</param>
+        public TriggerAction SetLength(double length)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = length.ToString(),
+                TriggerId = 306
+            };
+        }
+
+        /// <summary>
+        /// Assign sound as firing sound for this weapon
+        /// </summary>
+        /// <param name="soundName">Name of the sound to assign</param>
+        public TriggerAction SetFiringSound(string soundName)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = soundName,
+                TriggerId = 260
+            };
+        }
+
+        /// <summary>
+        /// Override existing Gun with a new gun with model
+        /// </summary>
+        /// <param name="newModel">New gun model name</param>
+        public TriggerAction OverrideWithModel(string newModel)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = newModel,
+                TriggerId = 287
             };
         }
     }
