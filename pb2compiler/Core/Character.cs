@@ -7,6 +7,42 @@ using static PlazmaScript.Program;
 
 namespace PlazmaScript.Core
 {
+    public enum AIBehavior
+    {
+        Default = 0,
+        FollowThePlayer = 1,
+        LookAround = 2,
+        Investigate = 3,
+        DoNothing = 4
+    }
+
+    public enum CharacterTeam
+    {
+        Alpha = 0,
+        Beta = 1,
+        Gamma = 2,
+        Delta = 3,
+        Zeta = 4,
+        Lambda = 5,
+        Sigma = 6,
+        Omega = 7,
+        CounterTerrorists = 8,
+        Terrorists = 9,
+        UsurpationForces = 10,
+        CitizenSecurity = 11,
+        RedTeam = 12,
+        BlueTeam = 13,
+        GreenTeam = 14,
+        WhiteTeam = 15,
+        BlackTeam = 16,
+        SpecialA = -1,
+        SpecialB = -2,
+        SpecialC = -3,
+        SpecialD = -4,
+        SpecialE = -5,
+        SpecialF = -6
+    }
+
     public class Character : LinkedObject
     {
         public Character(string uid, int x, int y)
@@ -98,6 +134,104 @@ namespace PlazmaScript.Core
                 ParameterA = Uid,
                 ParameterB = region.Uid,
                 TriggerId = 29
+            };
+        }
+
+        /// <summary>
+        /// Set AI Behavior parameter of this computer-controlled character
+        /// </summary>
+        /// <param name="behavior">The AI behavior enum value</param>
+        public TriggerAction SetAIBehavior(AIBehavior behavior)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = ((int)behavior).ToString(),
+                TriggerId = 32
+            };
+        }
+
+        /// <summary>
+        /// Set AI Behavior parameter of this computer-controlled character
+        /// </summary>
+        /// <param name="behavior">The AI behavior value (0-4)</param>
+        public TriggerAction SetAIBehavior(int behavior)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = behavior.ToString(),
+                TriggerId = 32
+            };
+        }
+
+        /// <summary>
+        /// Change the team of this character
+        /// </summary>
+        /// <param name="team">The new team enum value</param>
+        public TriggerAction ChangeTeam(CharacterTeam team)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = ((int)team).ToString(),
+                TriggerId = 33
+            };
+        }
+
+        /// <summary>
+        /// Change the team of this character
+        /// </summary>
+        /// <param name="team">The new team value (-6 to 16)</param>
+        public TriggerAction ChangeTeam(int team)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = team.ToString(),
+                TriggerId = 33
+            };
+        }
+
+        /// <summary>
+        /// Multiply maximal and current hit points of this character by percentage
+        /// </summary>
+        /// <param name="percentage">Percentage multiplier</param>
+        public TriggerAction MultiplyHitPoints(int percentage)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = percentage.ToString(),
+                TriggerId = 48
+            };
+        }
+
+        /// <summary>
+        /// Change the nickname of this character
+        /// </summary>
+        /// <param name="nickname">The new nickname</param>
+        public TriggerAction ChangeNickname(string nickname)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = nickname,
+                TriggerId = 52
+            };
+        }
+
+        /// <summary>
+        /// Clone this character and spawn it in a random place in a region
+        /// </summary>
+        /// <param name="region">The region to spawn the clone in</param>
+        public TriggerAction CloneAndSpawnRandom(Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = region.Uid,
+                TriggerId = 53
             };
         }
 

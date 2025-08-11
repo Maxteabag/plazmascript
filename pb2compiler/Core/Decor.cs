@@ -17,6 +17,12 @@ namespace PlazmaScript.Core
 
         public Decor(string uid, int x, int y, DecorModel model)
         {
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = x;
             Y = y;
@@ -42,6 +48,20 @@ namespace PlazmaScript.Core
             decorElement.SetAttributeValue("y", Y.ToString());
             
             return decorElement;
+        }
+
+        /// <summary>
+        /// Change the model of this decoration to a specific model name
+        /// </summary>
+        /// <param name="modelName">The new model name</param>
+        public TriggerAction ChangeModel(string modelName)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = modelName,
+                TriggerId = 34
+            };
         }
     }
 }

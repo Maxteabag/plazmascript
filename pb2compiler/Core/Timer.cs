@@ -117,5 +117,18 @@ namespace PlazmaScript.Core
                 TriggerId = 27
             };
         }
+
+        /// <summary>
+        /// Reset current phase of between-call waiting of this timer
+        /// </summary>
+        public TriggerAction ResetPhase()
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = "-1",
+                TriggerId = 44
+            };
+        }
     }
 }
