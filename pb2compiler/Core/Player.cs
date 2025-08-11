@@ -17,6 +17,12 @@ namespace PlazmaScript.Core
 
         public Player(string uid, int x, int y)
         {
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = x;
             Y = y;

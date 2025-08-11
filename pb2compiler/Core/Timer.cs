@@ -103,5 +103,19 @@ namespace PlazmaScript.Core
                 TriggerId = 46
             };
         }
+
+        /// <summary>
+        /// Set the frequency of calls of this timer to a specific value
+        /// </summary>
+        /// <param name="frequency">The new frequency value</param>
+        public TriggerAction SetFrequency(int frequency)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = frequency.ToString(),
+                TriggerId = 27
+            };
+        }
     }
 }

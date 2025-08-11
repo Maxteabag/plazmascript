@@ -36,6 +36,12 @@ namespace PlazmaScript.Core
 
         public Vehicle(string uid, int x, int y, VehicleModel model = VehicleModel.Jeep, VehicleSide side = VehicleSide.Blue)
         {
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = x;
             Y = y;

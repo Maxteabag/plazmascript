@@ -7,11 +7,14 @@ namespace PlazmaScript.Examples
     {
         public CompleteMapExample()
         {
-            // Set map environment properties
-            PB2Map.Gravity = 0.5;  // Default gravity
-
             // Create player
-            var mainPlayer = new Player("#player*1", 100, 200);
+            var mainPlayer = new Player("player*1", 100, 200);
+
+            // Create setup trigger that runs at map start
+            var mapSetup = new Trigger("map_setup", true); // ExecuteAtStart = true
+            
+            // Set gravity using proper trigger action
+            mapSetup.AddAction(PB2Map.SetGravity(0.5));
 
             // Build a simple house out of wall objects (Box elements)
             // House foundation/floor

@@ -59,6 +59,47 @@ namespace PlazmaScript.Core
             };
         }
 
+        /// <summary>
+        /// Set current hit points of this character to a specific value
+        /// </summary>
+        /// <param name="hitPoints">Hit points value</param>
+        public TriggerAction SetHitPoints(int hitPoints)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = hitPoints.ToString(),
+                TriggerId = 23
+            };
+        }
+
+        /// <summary>
+        /// Clone this character and spawn it in the centre of a region
+        /// </summary>
+        /// <param name="region">The region to spawn the clone in</param>
+        public TriggerAction CloneAndSpawn(Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = region.Uid,
+                TriggerId = 28
+            };
+        }
+
+        /// <summary>
+        /// Force all enemies of this character who are located in a region to hunt for this character
+        /// </summary>
+        /// <param name="region">The region containing enemies</param>
+        public TriggerAction ForceEnemiesInRegionHunt(Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = region.Uid,
+                TriggerId = 29
+            };
+        }
 
         public override XElement CreateXmlElement()
         {

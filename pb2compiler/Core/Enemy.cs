@@ -17,6 +17,12 @@ namespace PlazmaScript.Core
 
         public Enemy(string uid, int x, int y)
         {
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = x;
             Y = y;
@@ -25,6 +31,12 @@ namespace PlazmaScript.Core
 
         public Enemy(string uid, int x, int y, int side)
         {
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = x;
             Y = y;
@@ -34,6 +46,12 @@ namespace PlazmaScript.Core
 
         public Enemy(string uid, int x, int y, int side, int botAction)
         {
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = x;
             Y = y;

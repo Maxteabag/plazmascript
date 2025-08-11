@@ -18,6 +18,12 @@ namespace PlazmaScript.Core
 
         public Door(string uid, int x, int y, int width, int height)
         {
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = x;
             Y = y;

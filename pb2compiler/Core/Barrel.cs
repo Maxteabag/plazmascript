@@ -19,6 +19,12 @@ namespace PlazmaScript.Core
 
         public Barrel(string uid, int x, int y, BarrelModel model = BarrelModel.Orange)
         {
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = x;
             Y = y;
@@ -46,6 +52,20 @@ namespace PlazmaScript.Core
             barrelElement.SetAttributeValue("toy", TargetY.ToString());
             
             return barrelElement;
+        }
+
+        /// <summary>
+        /// Move this barrel to a region (if barrel not exploded)
+        /// </summary>
+        /// <param name="region">The target region</param>
+        public TriggerAction MoveToRegion(Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = region.Uid,
+                TriggerId = 16
+            };
         }
     }
 }

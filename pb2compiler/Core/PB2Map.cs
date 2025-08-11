@@ -8,8 +8,6 @@ namespace PlazmaScript.Core
     public static class PB2Map
     {
         public static List<MapObject> MapObjects { get; set; } = new List<MapObject>();
-        private static Trigger _initTrigger;
-        private static Timer _initTimer;
         
         static PB2Map()
         {
@@ -23,30 +21,20 @@ namespace PlazmaScript.Core
         {
             // Clear any existing objects (in case of multiple runs)
             MapObjects.Clear();
-            
-            // Don't add objects to the list in constructors during initialization
-            _initTrigger = new Trigger("map_init", true, false); // Pass false to skip auto-add
-            MapObjects.Add(_initTrigger);
-            
-            // Create timer to trigger the initialization
-            _initTimer = new Timer(0, 1, true, _initTrigger.Uid, false); // Pass false to skip auto-add
-            MapObjects.Add(_initTimer);
         }
 
         /// <summary>
-        /// Set the map's gravity (default is 0.5)
+        /// Create a trigger action to set map gravity
         /// </summary>
-        public static double Gravity
+        /// <param name="gravity">Gravity value (default is 0.5)</param>
+        public static TriggerAction SetGravity(double gravity)
         {
-            set
+            return new TriggerAction
             {
-                _initTrigger.AddAction(new TriggerAction
-                {
-                    ParameterA = value.ToString(),
-                    ParameterB = "-1",
-                    TriggerId = 5
-                });
-            }
+                ParameterA = gravity.ToString(),
+                ParameterB = "-1",
+                TriggerId = 5
+            };
         }
 
         /// <summary>

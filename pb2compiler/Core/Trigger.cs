@@ -23,6 +23,13 @@ namespace PlazmaScript.Core
             {
                 uid = RandomGenerator.RandomString(10);
             }
+            
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = 0;
             Y = 0;
@@ -257,6 +264,21 @@ namespace PlazmaScript.Core
                 ParameterA = trigger.Uid,
                 ParameterB = "-1",
                 TriggerId = 21
+            });
+        }
+
+        /// <summary>
+        /// Set number of remain calls of another trigger to a specific value
+        /// </summary>
+        /// <param name="trigger">The target trigger</param>
+        /// <param name="remainingCalls">Number of remaining calls</param>
+        public void SetRemainingCalls(Trigger trigger, int remainingCalls)
+        {
+            AddAction(new TriggerAction
+            {
+                ParameterA = trigger.Uid,
+                ParameterB = remainingCalls.ToString(),
+                TriggerId = 22
             });
         }
 

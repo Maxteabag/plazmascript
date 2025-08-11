@@ -11,6 +11,12 @@ namespace PlazmaScript.Core
     {
         public Region(string uid, int x, int y, int width, int height)
         {
+            // Automatically add # prefix if not present
+            if (!uid.StartsWith("#"))
+            {
+                uid = "#" + uid;
+            }
+            
             Uid = uid;
             X = x;
             Y = y;
@@ -142,6 +148,48 @@ namespace PlazmaScript.Core
                 ParameterA = power.ToString(),
                 ParameterB = Uid,
                 TriggerId = 10
+            };
+        }
+
+        /// <summary>
+        /// Make an explosion with specified power at this region
+        /// </summary>
+        /// <param name="power">The explosion power</param>
+        public TriggerAction MakeExplosion(int power)
+        {
+            return new TriggerAction
+            {
+                ParameterA = power.ToString(),
+                ParameterB = Uid,
+                TriggerId = 24
+            };
+        }
+
+        /// <summary>
+        /// Teleport all players from this region to another region
+        /// </summary>
+        /// <param name="targetRegion">The destination region</param>
+        public TriggerAction TeleportAllPlayersTo(Region targetRegion)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = targetRegion.Uid,
+                TriggerId = 30
+            };
+        }
+
+        /// <summary>
+        /// Teleport all players from this region to another region and invert speed by X axis
+        /// </summary>
+        /// <param name="targetRegion">The destination region</param>
+        public TriggerAction TeleportAllPlayersToWithSpeedInvert(Region targetRegion)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = targetRegion.Uid,
+                TriggerId = 31
             };
         }
 
