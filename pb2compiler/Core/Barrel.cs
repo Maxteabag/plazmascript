@@ -67,5 +67,33 @@ namespace PlazmaScript.Core
                 TriggerId = 16
             };
         }
+
+        /// <summary>
+        /// Set this barrel's hit points using a variable
+        /// </summary>
+        /// <param name="hitPointsVariable">Variable containing hit points value</param>
+        public TriggerAction SetHitPoints(Variable hitPointsVariable)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = hitPointsVariable.Name,
+                TriggerId = 460
+            };
+        }
+
+        /// <summary>
+        /// Clone this barrel and spawn it at centre of a region
+        /// </summary>
+        /// <param name="region">Region to spawn the clone in</param>
+        public TriggerAction CloneAndSpawn(Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = region.Uid,
+                TriggerId = 461
+            };
+        }
     }
 }

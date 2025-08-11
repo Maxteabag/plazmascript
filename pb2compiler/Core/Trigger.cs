@@ -282,6 +282,34 @@ namespace PlazmaScript.Core
             });
         }
 
+        /// <summary>
+        /// Call this trigger each time new player joins the match
+        /// </summary>
+        public TriggerAction CallOnNewPlayerJoin()
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = "-1",
+                TriggerId = 228
+            };
+        }
+
+        /// <summary>
+        /// Continue execution only if session variable was set by map with specific ID(s)
+        /// </summary>
+        /// <param name="sessionVariable">Session variable to check</param>
+        /// <param name="mapIds">Map ID(s) - can be comma-separated list without spaces</param>
+        public TriggerAction ContinueIfSessionVariableFromMap(Variable sessionVariable, string mapIds)
+        {
+            return new TriggerAction
+            {
+                ParameterA = sessionVariable.Name,
+                ParameterB = mapIds,
+                TriggerId = 230
+            };
+        }
+
         public override XElement CreateXmlElement()
         {
             var triggerElement = new XElement("trigger");

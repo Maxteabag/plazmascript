@@ -7,7 +7,7 @@ using static PlazmaScript.Program;
 
 namespace PlazmaScript.Core
 {
-    public class Door : SizedObject
+    public class Moveable : SizedObject
     {
         public bool Moving { get; set; } = false;
         public int TarX { get; set; } = 0;
@@ -16,7 +16,7 @@ namespace PlazmaScript.Core
         public bool Visible { get; set; } = true;
         public int Attach { get; set; } = -1;
 
-        public Door(string uid, int x, int y, int width, int height)
+        public Moveable(string uid, int x, int y, int width, int height)
         {
             // Automatically add # prefix if not present
             if (!uid.StartsWith("#"))
@@ -73,6 +73,34 @@ namespace PlazmaScript.Core
             element.SetAttributeValue("attach", Attach.ToString());
 
             return element;
+        }
+
+        /// <summary>
+        /// Change the color of this moveable to a HEX color
+        /// </summary>
+        /// <param name="hexColor">HEX color value (e.g., "#FF0000")</param>
+        public TriggerAction ChangeColor(string hexColor)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = hexColor,
+                TriggerId = 71
+            };
+        }
+
+        /// <summary>
+        /// Call a trigger when this moveable takes damage
+        /// </summary>
+        /// <param name="trigger">The trigger to call when damaged</param>
+        public TriggerAction CallTriggerOnDamage(Trigger trigger)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = trigger.Uid,
+                TriggerId = 82
+            };
         }
     }
 }
