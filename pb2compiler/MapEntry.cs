@@ -11,7 +11,7 @@ namespace PlazmaScript
     {
         public MapEntry()
         {
-            var example = new ComponentsUsageExample();
+            var example = new CompleteMapExample();
         }
     }
 }

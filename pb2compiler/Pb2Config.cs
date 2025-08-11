@@ -30,8 +30,8 @@ namespace PlazmaScript
             /// </summary>
             public static string GetPassword()
             {
-                string wanted_path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
-                wanted_path = wanted_path + "/password.txt";
+                string wanted_path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", ".."));
+                wanted_path = Path.Combine(wanted_path, "password.txt");
 
                 string text = System.IO.File.ReadAllText(wanted_path);
 
@@ -68,7 +68,7 @@ namespace PlazmaScript
             /// <summary>
             /// Path to where the pb2 map is generated
             /// </summary>
-            public static string MapPath { get; set; } = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\")) +"/GeneratedMaps/" + Fragment.Id  + ".xml";
+            public static string MapPath { get; set; } = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..")) + "/GeneratedMaps/MapExample.xml";
         }
 
     }

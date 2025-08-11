@@ -1,0 +1,2130 @@
+{
+  "0": {
+    "description": "Force Movable 'A' move to region 'B'",
+    "category": "Movable"
+  },
+  "1": {
+    "description": "Change Speed of Movable 'A' to value 'B'",
+    "category": "Movable"
+  },
+  "2": {
+    "description": "Quickly move Region with name 'A' to the position of the region with name 'B'",
+    "category": "Region"
+  },
+  "3": {
+    "description": "Change the number of hit points of Vehicle 'A' to 'B' percents",
+    "category": "Vehicle"
+  },
+  "4": {
+    "description": "Change the number of hit points of Character 'A' to 'B' percents",
+    "category": "Character"
+  },
+  "5": {
+    "description": "Change the gravity to the value 'A' (Default is 0.5)",
+    "category": "Gravity"
+  },
+  "6": {
+    "description": "Make damage in Region 'B' with power of 'A' hit points",
+    "category": "Region"
+  },
+  "9": {
+    "description": "End mission with reason 'A'",
+    "category": "Scenario"
+  },
+  "10": {
+    "description": "Harm the stability with power 'A' of all Characters located at Region with the name 'B'",
+    "category": "Region"
+  },
+  "11": {
+    "description": "Kill all Characters at Region 'B' which are not allied to Character 'A'",
+    "category": "Region"
+  },
+  "12": {
+    "description": "Destroy all vehicles in Region 'A'",
+    "category": "Region"
+  },
+  "13": {
+    "description": "Put Character 'A' into the Vehicle 'B'",
+    "category": "Character"
+  },
+  "14": {
+    "description": "Move Character 'A' to the region 'B' (if Character alive)",
+    "category": "Character"
+  },
+  "15": {
+    "description": "Move Gun 'A' to the Region 'B'",
+    "category": "Gun"
+  },
+  "16": {
+    "description": "Move Barrel 'A' to the Region 'B' (if Barrel not exploded)",
+    "category": "Barrel"
+  },
+  "18": {
+    "description": "Move Region 'A' to the Region 'B' (centres will be located in the same point)",
+    "category": "Region"
+  },
+  "19": {
+    "description": "Deactivate Trigger 'A'",
+    "category": "Trigger"
+  },
+  "20": {
+    "description": "Activate Trigger 'A'",
+    "category": "Trigger"
+  },
+  "21": {
+    "description": "Set number of remain calls of Trigger 'A' to 0",
+    "category": "Trigger"
+  },
+  "22": {
+    "description": "Set number of remain calls of Trigger 'A' to value 'B'",
+    "category": "Trigger"
+  },
+  "23": {
+    "description": "Set current hit points of Character 'A' to 'B' hit points (not sets hit points of each limb)",
+    "category": "Character"
+  },
+  "24": {
+    "description": "Make an explosion with power 'A' at Region 'B'",
+    "category": "Region"
+  },
+  "25": {
+    "description": "Activate Timer 'A'",
+    "category": "Timer"
+  },
+  "26": {
+    "description": "Deactivate Timer 'A'",
+    "category": "Timer"
+  },
+  "27": {
+    "description": "Set the frequency of calls of Timer 'A' to value 'B'",
+    "category": "Timer"
+  },
+  "28": {
+    "description": "Clone Character 'A' and spawn it in the centre of Region 'B'",
+    "category": "Character"
+  },
+  "29": {
+    "description": "Force all enemies of Character 'A' who located in region 'B' hunt for Character 'A'",
+    "category": "Region"
+  },
+  "30": {
+    "description": "Teleport all players from Region 'A' to Region 'B'",
+    "category": "Region"
+  },
+  "31": {
+    "description": "Teleport all players from Region 'A' to Region 'B' and invert speed by X axis (used to avoid loop teleportation)",
+    "category": "Region"
+  },
+  "32": {
+    "description": "Set ''AI Behavior'' parameter of computer-controlled Character 'A' to value 'B'",
+    "category": "Character"
+  },
+  "33": {
+    "description": "Change team of Character 'A' to value 'B'",
+    "category": "Character"
+  },
+  "34": {
+    "description": "Change model of Decoration 'A' to model named 'B'",
+    "category": "Decoration"
+  },
+  "35": {
+    "description": "Set X acceleration of Gravitator Area Field 'A' to value 'B'",
+    "category": "Gravitator Area Field"
+  },
+  "36": {
+    "description": "Set Y acceleration of Gravitator Area Field 'A' to value 'B'",
+    "category": "Gravitator Area Field"
+  },
+  "37": {
+    "description": "Set stability damage of Gravitator Area Field 'A' to value 'B' (0 for disable)",
+    "category": "Gravitator Area Field"
+  },
+  "38": {
+    "description": "Set damage of Gravitator Area Field 'A' to value 'B' (0 for disable)",
+    "category": "Gravitator Area Field"
+  },
+  "39": {
+    "description": "Set game speed to 'A' frames per second (default game speed is 30. Does not influence rendering)",
+    "category": "Gameplay"
+  },
+  "40": {
+    "description": "Change Strict Casual Mode status",
+    "category": "Gameplay"
+  },
+  "41": {
+    "description": "Play sound 'A' from library",
+    "category": "Sound"
+  },
+  "42": {
+    "description": "Show text 'A' in chat with color 'B'",
+    "category": "Interface"
+  },
+  "43": {
+    "description": "Show hint with text 'A'. Leave 'A' as empty to force hint dissapear",
+    "category": "Interface"
+  },
+  "44": {
+    "description": "Reset current phase of between-call waiting of Timer 'A'",
+    "category": "Timer"
+  },
+  "45": {
+    "description": "Allow or disallow usage of defibrillators by allies with value of parameter 'A'",
+    "category": "Gameplay"
+  },
+  "46": {
+    "description": "Set remain calls number of Timer 'A' to value 'B'",
+    "category": "Timer"
+  },
+  "48": {
+    "description": "Multiply maximal and current hit points of Character 'A' by 'B' percents. Not for multiplayer",
+    "category": "Character"
+  },
+  "49": {
+    "description": "Set Disabling of psi swords to value of parameter 'A'",
+    "category": "Gameplay"
+  },
+  "50": {
+    "description": "Mission complete and switch to level with ID 'A'",
+    "category": "Scenario"
+  },
+  "51": {
+    "description": "Zoom game camera to 'A' % (percents)",
+    "category": "Gameplay"
+  },
+  "52": {
+    "description": "Change Character 'A' nickname to 'B'",
+    "category": "Character"
+  },
+  "53": {
+    "description": "Clone Character 'A' and spawn it in random place in Region 'B'",
+    "category": "Character"
+  },
+  "54": {
+    "description": "Turn light 'A' on",
+    "category": "Light"
+  },
+  "55": {
+    "description": "Turn light 'A' off",
+    "category": "Light"
+  },
+  "56": {
+    "description": "Flip X speed for all players in region 'B'",
+    "category": "Region"
+  },
+  "57": {
+    "description": "Flip Y speed for all players in region 'B'",
+    "category": "Region"
+  },
+  "58": {
+    "description": "Change Character 'A' skin to 'B'",
+    "category": "Character"
+  },
+  "59": {
+    "description": "Set Character 'A' current and max hit points to value 'B'",
+    "category": "Character"
+  },
+  "60": {
+    "description": "Force Character 'A' to drop all weapons",
+    "category": "Character"
+  },
+  "61": {
+    "description": "Multiply Character 'A' speed by value 'B'",
+    "category": "Character"
+  },
+  "62": {
+    "description": "Force Gun 'A' spawn 'B' projectiles per shot",
+    "category": "Gun"
+  },
+  "63": {
+    "description": "Change Gun 'A' accuracy to 'B' degress",
+    "category": "Gun"
+  },
+  "64": {
+    "description": "Change Gun 'A' projectile power to 'B'",
+    "category": "Gun"
+  },
+  "65": {
+    "description": "Convert Gun 'A' projectiles into bullets",
+    "category": "Gun"
+  },
+  "66": {
+    "description": "Convert Gun 'A' projectiles into rails",
+    "category": "Gun"
+  },
+  "67": {
+    "description": "Convert Gun 'A' projectiles into grenades",
+    "category": "Gun"
+  },
+  "68": {
+    "description": "Convert Gun 'A' projectiles into energy",
+    "category": "Gun"
+  },
+  "69": {
+    "description": "Convert Gun 'A' projectiles into rockets",
+    "category": "Gun"
+  },
+  "70": {
+    "description": "Teleport player-initiator from Region 'A' to Region 'B'",
+    "category": "Region"
+  },
+  "71": {
+    "description": "Change color of Movable 'A' to HEX color 'B'",
+    "category": "Movable"
+  },
+  "72": {
+    "description": "Multiply speed of players in Region 'A' by value 'B'",
+    "category": "Region"
+  },
+  "73": {
+    "description": "Change bullet speed to value 'A' (default value is 60)",
+    "category": "Gameplay"
+  },
+  "74": {
+    "description": "Change bullet penetration factor to value 'A' (default value is 1)",
+    "category": "Gameplay"
+  },
+  "75": {
+    "description": "Change max bullet life value 'A' (default value is 30)",
+    "category": "Gameplay"
+  },
+  "76": {
+    "description": "Allow Gun 'A' only for characters",
+    "category": "Gun"
+  },
+  "77": {
+    "description": "Allow Gun 'A' only for vehicles",
+    "category": "Gun"
+  },
+  "78": {
+    "description": "Set Gun 'A' slot to 'B'",
+    "category": "Gun"
+  },
+  "79": {
+    "description": "Move Region 'A' to player-initiator",
+    "category": "Region"
+  },
+  "80": {
+    "description": "Move Region 'A' to player 'B'",
+    "category": "Region"
+  },
+  "81": {
+    "description": "Call Trigger 'B' when Gun 'A' fired",
+    "category": "Gun"
+  },
+  "82": {
+    "description": "Call Trigger 'B' when Movable 'A' got damage",
+    "category": "Movable"
+  },
+  "83": {
+    "description": "Move Region 'A' relative to current position along X",
+    "category": "Region"
+  },
+  "84": {
+    "description": "Move Region 'B' relative to current position along Y",
+    "category": "Region"
+  },
+  "85": {
+    "description": "Mute Movable 'A'",
+    "category": "Movable"
+  },
+  "86": {
+    "description": "Unmute Movable 'A'",
+    "category": "Movable"
+  },
+  "87": {
+    "description": "Move Region 'A' to player-initiator's cursor",
+    "category": "Region"
+  },
+  "88": {
+    "description": "Change Character 'A' mobility factor to 'B'",
+    "category": "Character"
+  },
+  "89": {
+    "description": "Change Character 'A' armor type to 'B' (0, 1 or 2)",
+    "category": "Character"
+  },
+  "90": {
+    "description": "Change blood color of Character 'A' to HEX color 'B'",
+    "category": "Character"
+  },
+  "91": {
+    "description": "Set horizontal movement on idle Character 'A' to value 'B' (0, -1 or 1)",
+    "category": "Character"
+  },
+  "92": {
+    "description": "Set vertical movement on idle Character 'A' to value 'B' (0, -1 or 1)",
+    "category": "Character"
+  },
+  "93": {
+    "description": "Set shoot action on idle Character 'A' to value 'B' (0 or 1)",
+    "category": "Character"
+  },
+  "94": {
+    "description": "Force Character 'A' to look at random point in Region 'B'",
+    "category": "Character"
+  },
+  "95": {
+    "description": "Continue execution of this trigger only if tracing from center of Region 'A' to center of Region 'B' is possible",
+    "category": "Trigger Execution"
+  },
+  "96": {
+    "description": "Continue execution of this trigger only if tracing from center of Region 'A' to center of Region 'B' is impossible",
+    "category": "Trigger Execution"
+  },
+  "97": {
+    "description": "Force Character 'A' to hunt Character 'B'",
+    "category": "Character"
+  },
+  "98": {
+    "description": "Move Region 'A' to Movable 'B'",
+    "category": "Region"
+  },
+  "99": {
+    "description": "Execute trigger 'A'",
+    "category": "Trigger Execution"
+  },
+  "100": {
+    "description": "Set variable 'A' value to value 'B'",
+    "category": "Var"
+  },
+  "101": {
+    "description": "Set variable 'A' value to value 'B' if 'A' is not defined",
+    "category": "Var"
+  },
+  "102": {
+    "description": "Add value 'B' to value of variable 'A'",
+    "category": "Var"
+  },
+  "103": {
+    "description": "Multiply value of variable 'A' by value 'B'",
+    "category": "Var"
+  },
+  "104": {
+    "description": "Add value of variable 'B' to value of variable 'A'",
+    "category": "Var"
+  },
+  "105": {
+    "description": "Multiply value of variable 'A' by value of variable 'B'",
+    "category": "Var"
+  },
+  "106": {
+    "description": "Set value of variable 'A' to random number with floating point in range 0..B",
+    "category": "Var"
+  },
+  "107": {
+    "description": "Set value of variable 'A' to random integer number in range 0..B-1",
+    "category": "Var"
+  },
+  "108": {
+    "description": "Round value of variable 'A'",
+    "category": "Var"
+  },
+  "109": {
+    "description": "Floor value of variable 'A'",
+    "category": "Var"
+  },
+  "110": {
+    "description": "Continue trigger actions execution only if variable 'A' is greater than variable 'B'",
+    "category": "Var"
+  },
+  "111": {
+    "description": "Continue trigger actions execution only if variable 'A' is less than variable 'B'",
+    "category": "Var"
+  },
+  "112": {
+    "description": "Continue trigger actions execution only if variable 'A' equals variable 'B'",
+    "category": "Var"
+  },
+  "113": {
+    "description": "Continue trigger actions execution only if variable 'A' does not equals to variable 'B'",
+    "category": "Var"
+  },
+  "114": {
+    "description": "Continue trigger actions execution only if variable 'A' has greater value than value 'B'",
+    "category": "Var"
+  },
+  "115": {
+    "description": "Continue trigger actions execution only if value of variable 'A' is less than value 'B'",
+    "category": "Var"
+  },
+  "116": {
+    "description": "Continue trigger actions execution only if value of variable 'A' equals value 'B'",
+    "category": "Var"
+  },
+  "117": {
+    "description": "Continue trigger actions execution only if value of variable 'A' does not equals to value 'B'",
+    "category": "Var"
+  },
+  "118": {
+    "description": "Set value of variable 'A' to value of region 'B' X position of left-top corner point",
+    "category": "Var"
+  },
+  "119": {
+    "description": "Set value of variable 'A' to value of region 'B' Y position of left-top corner point",
+    "category": "Var"
+  },
+  "120": {
+    "description": "Set X position of 'A' region left-top corner point to value of variable 'B'",
+    "category": "Var"
+  },
+  "121": {
+    "description": "Set Y position of 'A' region left-top corner point to value of variable 'B'",
+    "category": "Var"
+  },
+  "122": {
+    "description": "Set value of variable 'A' to hitpoints value of player 'B'",
+    "category": "Var"
+  },
+  "123": {
+    "description": "Skip next trigger action if value of variable 'A' does not equals value 'B'",
+    "category": "Var"
+  },
+  "124": {
+    "description": "Set variable 'A' value to remainder after division by value 'B' (only positive numbers)",
+    "category": "Var"
+  },
+  "125": {
+    "description": "Set variable 'A' value to value of variable 'B'",
+    "category": "Var"
+  },
+  "126": {
+    "description": "Make an explosion with power of value of variable 'A' at Region 'B'",
+    "category": "Var"
+  },
+  "127": {
+    "description": "Set variable 'A' value to remainder after division by value of variable 'B' (only positive numbers)",
+    "category": "Var"
+  },
+  "128": {
+    "description": "Force Gun 'A' spawn value of variable 'B' projectiles per shot",
+    "category": "Var"
+  },
+  "129": {
+    "description": "Change Gun 'A' accuracy to value of variable 'B' degress",
+    "category": "Var"
+  },
+  "130": {
+    "description": "Change Gun 'A' projectile power to value of variable 'B'",
+    "category": "Var"
+  },
+  "131": {
+    "description": "Divide variable 'A' by value 'B'",
+    "category": "Var"
+  },
+  "132": {
+    "description": "Divide variable 'A' by value of variable 'B'",
+    "category": "Var"
+  },
+  "133": {
+    "description": "Set value of variable 'A' to result of power function with value of variable 'A' and power of value of variable 'B'",
+    "category": "Var"
+  },
+  "134": {
+    "description": "Set value of variable 'A' to result of power function with value of variable 'A' and power of value 'B'",
+    "category": "Var"
+  },
+  "135": {
+    "description": "Set value of variable 'A' to result of sin function with value of variable 'B' (in radians) as parameter",
+    "category": "Var"
+  },
+  "136": {
+    "description": "Set value of variable 'A' to result of cos function with value of variable 'B' (in radians) as parameter",
+    "category": "Var"
+  },
+  "137": {
+    "description": "Set value of variable 'A' to slot of current player",
+    "category": "Var"
+  },
+  "138": {
+    "description": "Set value of variable 'A' to 1 if game is in multiplyer mode and to 0 in else case",
+    "category": "Var"
+  },
+  "139": {
+    "description": "Set value of variable 'A' to 1 if my player is spectating this match as spectator and to 0 in else case",
+    "category": "Var"
+  },
+  "140": {
+    "description": "Set value of variable 'A' to 1 if LOW PHYSICS setting is enabled and to 0 in else case",
+    "category": "Var"
+  },
+  "141": {
+    "description": "Damage player 'A' head hitpoints by value 'B'",
+    "category": "Character"
+  },
+  "142": {
+    "description": "Damage player 'A' arms hitpoints by value 'B'",
+    "category": "Character"
+  },
+  "143": {
+    "description": "Damage player 'A' body hitpoints by value 'B'",
+    "category": "Character"
+  },
+  "144": {
+    "description": "Damage player 'A' legs hitpoints by value 'B'",
+    "category": "Character"
+  },
+  "145": {
+    "description": "Set value of variable 'A' to number of alive players in region 'B'",
+    "category": "Var"
+  },
+  "146": {
+    "description": "Set string-value of variable 'A' to login name of player-initiator",
+    "category": "Var"
+  },
+  "147": {
+    "description": "Set string-value of variable 'A' to displayed name of player-initiator",
+    "category": "Var"
+  },
+  "148": {
+    "description": "Set string-value of variable 'A' to multiplayer match name",
+    "category": "Var"
+  },
+  "149": {
+    "description": "Set value of variable 'A' to 1 if string-value of variable 'A' contains string-value 'B' and to 0 in else case",
+    "category": "Var"
+  },
+  "150": {
+    "description": "Set value of variable 'A' to 1 if string-value of variable 'A' contains string-value of variable 'B' and to 0 in else case",
+    "category": "Var"
+  },
+  "151": {
+    "description": "Set value of variable 'A' to length of string-value of variable 'B'",
+    "category": "Var"
+  },
+  "152": {
+    "description": "Add string-value of variable 'B' at the end of string-value of variable 'A'",
+    "category": "Var"
+  },
+  "153": {
+    "description": "Set value of variable 'A' to 1-A",
+    "category": "Var"
+  },
+  "154": {
+    "description": "Set value of variable 'A' to -A",
+    "category": "Var"
+  },
+  "155": {
+    "description": "Set value of variable 'A' to current frame time",
+    "category": "Var"
+  },
+  "156": {
+    "description": "Set trigger 'A' as player chat message receiver",
+    "category": "Trigger"
+  },
+  "157": {
+    "description": "Set string-value of variable 'A' to login name of player who says text",
+    "category": "Var"
+  },
+  "158": {
+    "description": "Set string-value of variable 'A' to displayed name of player who says text",
+    "category": "Var"
+  },
+  "159": {
+    "description": "Set value of variable 'A' to slot index of player who says text",
+    "category": "Var"
+  },
+  "160": {
+    "description": "Set string-value of variable 'A' to text being said",
+    "category": "Var"
+  },
+  "161": {
+    "description": "Clear all session variables",
+    "category": "Session Vars"
+  },
+  "162": {
+    "description": "Save value of regular variable 'B' to session variable 'A'",
+    "category": "Session Vars"
+  },
+  "163": {
+    "description": "Load value for regular variable 'B' from session variable 'A'",
+    "category": "Session Vars"
+  },
+  "164": {
+    "description": "Change head model of Character 'A' to model 'B'",
+    "category": "Character"
+  },
+  "165": {
+    "description": "Change body model of Character 'A' to model 'B'",
+    "category": "Character"
+  },
+  "166": {
+    "description": "Change arms model of Character 'A' to model 'B'",
+    "category": "Character"
+  },
+  "167": {
+    "description": "Change legs model of Character 'A' to model 'B'",
+    "category": "Character"
+  },
+  "168": {
+    "description": "Set Character 'A' color pattern (4 small letters for each body sections, each represents first symbol of color in lowercase. - disables color change for specific section)",
+    "category": "Character"
+  },
+  "169": {
+    "description": "Request webpage with URL stored in variable 'A' and save response to variable 'B' once loaded (variable 'B' will be equal to ''loading...'' for some period of time)",
+    "category": "URL"
+  },
+  "170": {
+    "description": "Change Gun 'A' speed multiplier to value 'B'",
+    "category": "Gun"
+  },
+  "171": {
+    "description": "Change Gun 'A' speed multiplier to value of variable 'B'",
+    "category": "Var"
+  },
+  "172": {
+    "description": "Change Gun 'A' recoil multiplier to value 'B'",
+    "category": "Gun"
+  },
+  "173": {
+    "description": "Change Gun 'A' recoil multiplier to value of variable 'B'",
+    "category": "Var"
+  },
+  "174": {
+    "description": "Set global AI difficulty (easy = 1, normal = 2, hard = 3)",
+    "category": "AI"
+  },
+  "175": {
+    "description": "Change Gun 'A' projectile model to model with index 'B'",
+    "category": "Gun"
+  },
+  "176": {
+    "description": "Change Gun 'A' projectile model to model with index-value of variable 'B'",
+    "category": "Var"
+  },
+  "177": {
+    "description": "Set value of variable 'A' to id of type of current multiplayer mode (0 = singleplayer, 1 = DM, 2 = COOP, 3 = TDM)",
+    "category": "Var"
+  },
+  "178": {
+    "description": "Save inventory info of Character 'B' to variable 'A'",
+    "category": "Var"
+  },
+  "179": {
+    "description": "Spawn all weapons stored in variable 'A' at position of Character 'B'",
+    "category": "Var"
+  },
+  "180": {
+    "description": "Set value of variable 'A' to player-initiator slot",
+    "category": "Var"
+  },
+  "181": {
+    "description": "Set value of variable 'A' to player-killer slot",
+    "category": "Var"
+  },
+  "182": {
+    "description": "Set value of variable 'A' to login name of player-killer",
+    "category": "Var"
+  },
+  "183": {
+    "description": "Set value of variable 'A' to displayed name of player-killer",
+    "category": "Var"
+  },
+  "184": {
+    "description": "Set value of variable 'A' to login name of player with slot 'B'",
+    "category": "Var"
+  },
+  "185": {
+    "description": "Set value of variable 'A' to displayed name of player with slot 'B'",
+    "category": "Var"
+  },
+  "186": {
+    "description": "Set value of variable 'A' to team ID of player with slot 'B'",
+    "category": "Var"
+  },
+  "187": {
+    "description": "Set value of variable 'A' to login name of player with slot-value of variable 'B'",
+    "category": "Var"
+  },
+  "188": {
+    "description": "Set value of variable 'A' to displayed name of player with slot-value of variable 'B'",
+    "category": "Var"
+  },
+  "189": {
+    "description": "Set value of variable 'A' to team ID of player with slot-value of variable 'B'",
+    "category": "Var"
+  },
+  "190": {
+    "description": "Enable multiplayer frag/death messages",
+    "category": "Interface"
+  },
+  "191": {
+    "description": "Disable multiplayer frag/death messages",
+    "category": "Interface"
+  },
+  "192": {
+    "description": "Change sky image",
+    "category": "Environment"
+  },
+  "193": {
+    "description": "Change sky color HEX multiplier",
+    "category": "Environment"
+  },
+  "194": {
+    "description": "Set respawn speed multiplier (defaults to 1, but 1.5 in ranked)",
+    "category": "Gameplay"
+  },
+  "195": {
+    "description": "Change sky color Red multiplier to value of variable 'A'",
+    "category": "Environment"
+  },
+  "196": {
+    "description": "Change sky color Green multiplier to value of variable 'A'",
+    "category": "Environment"
+  },
+  "197": {
+    "description": "Change sky color Blue multiplier to value of variable 'A'",
+    "category": "Environment"
+  },
+  "198": {
+    "description": "Create Voice object and save it as variable 'A'",
+    "category": "Text-to-Speech"
+  },
+  "199": {
+    "description": "Set volume 'B' for Voice object 'A'",
+    "category": "Text-to-Speech"
+  },
+  "200": {
+    "description": "Set pitch 'B' for Voice object 'A'",
+    "category": "Text-to-Speech"
+  },
+  "201": {
+    "description": "Set voice model 'B' for Voice object 'A'",
+    "category": "Text-to-Speech"
+  },
+  "202": {
+    "description": "Speak text 'B' with Voice object 'A'",
+    "category": "Text-to-Speech"
+  },
+  "203": {
+    "description": "Speak text-value of variable 'B' with Voice object 'A'",
+    "category": "Text-to-Speech"
+  },
+  "204": {
+    "description": "Set value of variable 'A' to result of asin function with value of variable 'B' as parameter",
+    "category": "Var"
+  },
+  "205": {
+    "description": "Set value of variable 'A' to result of acos function with value of variable 'B' as parameter",
+    "category": "Var"
+  },
+  "206": {
+    "description": "Set value of variable 'A' to result of atan2 function with values of variables 'A' and 'B' as parameters",
+    "category": "Var"
+  },
+  "207": {
+    "description": "Enable anonymous mode (disable player overheads, chat messages are not show in chat)",
+    "category": "Gameplay"
+  },
+  "208": {
+    "description": "Disable anonymous mode (enable player overheads, chat messages are show in chat)",
+    "category": "Gameplay"
+  },
+  "209": {
+    "description": "Set regeneration speed multiplier to value 'A' (defaults to 1)",
+    "category": "Gameplay"
+  },
+  "210": {
+    "description": "Set regeneration speed multiplier to value of variable 'A'",
+    "category": "Gameplay"
+  },
+  "211": {
+    "description": "Set regeneration delay multiplier to value 'A' (defaults to 1, but 2 in ranked)",
+    "category": "Gameplay"
+  },
+  "212": {
+    "description": "Set regeneration delay multiplier to value of variable 'A'",
+    "category": "Gameplay"
+  },
+  "213": {
+    "description": "Set physical player impact damage multiplier to 'A' (default is 1)",
+    "category": "Gameplay"
+  },
+  "214": {
+    "description": "Set physical player impact damage threshold to 'A' (higher values increase chance to receive any impact damage. Default for approved maps is 0.9, in else cases it is 1)",
+    "category": "Gameplay"
+  },
+  "215": {
+    "description": "Set self-boost force multiplier (default is 1)",
+    "category": "Gameplay"
+  },
+  "216": {
+    "description": "Set unstable self-boost force multiplier for HIGH physics setting (default for approved maps is 2.8, in else cases it is 1)",
+    "category": "Gameplay"
+  },
+  "217": {
+    "description": "Set unstable self-boost force multiplier for LOW physics setting (default is 1)",
+    "category": "Gameplay"
+  },
+  "218": {
+    "description": "Change Gun 'A' target knockback multiplier to value 'B'",
+    "category": "Gun"
+  },
+  "219": {
+    "description": "Change Gun 'A' target knockback multiplier to value of variable 'B'",
+    "category": "Gun"
+  },
+  "220": {
+    "description": "Set Character 'A' scale to value 'B'",
+    "category": "Character"
+  },
+  "221": {
+    "description": "Set Character 'A' scale to value of variable 'B'",
+    "category": "Character"
+  },
+  "222": {
+    "description": "Set Character 'A' zoom to value 'B'",
+    "category": "Character"
+  },
+  "223": {
+    "description": "Synchronize value of variable 'A' through overriding value for all connected players (requires Var Sync engine mark)",
+    "category": "Var"
+  },
+  "224": {
+    "description": "Synchronize value of variable 'A' through keeping defined value (requires Var Sync engine mark)",
+    "category": "Var"
+  },
+  "225": {
+    "description": "Synchronize value of variable 'A' through keeping maximum value (requires Var Sync engine mark)",
+    "category": "Var"
+  },
+  "226": {
+    "description": "Synchronize value of variable 'A' through keeping minimum value (requires Var Sync engine mark)",
+    "category": "Var"
+  },
+  "227": {
+    "description": "Synchronize value of variable 'A' through keeping longest String value (requires Var Sync engine mark)",
+    "category": "Var"
+  },
+  "228": {
+    "description": "Call trigger 'A' each time new player joins the match",
+    "category": "Trigger"
+  },
+  "229": {
+    "description": "Play song",
+    "category": "Sound"
+  },
+  "230": {
+    "description": "Continue trigger actions execution only if value of session variable 'A' was set by map with ID 'B' (list of map IDs can be used, separated with commas without spaces)",
+    "category": "Trigger Execution"
+  },
+  "231": {
+    "description": "Set text placeholder decoration text",
+    "category": "Decoration"
+  },
+  "232": {
+    "description": "Set decoration HEX color multiplier",
+    "category": "Decoration"
+  },
+  "233": {
+    "description": "Set decoration scale to value 'B'",
+    "category": "Decoration"
+  },
+  "234": {
+    "description": "Set decoration scale to value of variable 'B'",
+    "category": "Decoration"
+  },
+  "235": {
+    "description": "Set variable 'A' value to of projectile power (this trigger should receive damage from Movable)",
+    "category": "Var"
+  },
+  "236": {
+    "description": "Subtract projectile power from value of variable 'A' (this trigger should receive damage from Movable)",
+    "category": "Var"
+  },
+  "237": {
+    "description": "Change Gun 'A' max spread accuracy to value 'B' (in radians)",
+    "category": "Gun"
+  },
+  "238": {
+    "description": "Change Gun 'A' added spread accuracy to value 'B' (in radians) per shot",
+    "category": "Gun"
+  },
+  "239": {
+    "description": "Change Gun 'A' subtracted spread accuracy to value 'B' (in radians) over time",
+    "category": "Gun"
+  },
+  "240": {
+    "description": "Set rocket projetiles' speed multiplier to value 'A'",
+    "category": "Gameplay"
+  },
+  "241": {
+    "description": "Set grenade projetiles' speed multiplier to value 'A'",
+    "category": "Gameplay"
+  },
+  "242": {
+    "description": "Set plasma projetiles' speed multiplier to value 'A'",
+    "category": "Gameplay"
+  },
+  "243": {
+    "description": "Create Map Preview from Region 'A' (only owner can execute this. Prevent execution for other players in order to prevent lag)",
+    "category": "Map Preview"
+  },
+  "244": {
+    "description": "Set rate 'B' for Voice object 'A'",
+    "category": "Text-to-Speech"
+  },
+  "245": {
+    "description": "Lock camera at region 'A' (region size must be 800x400 for zoom of 100%) with intensity multiplier 'B' (0..1)",
+    "category": "Gameplay"
+  },
+  "246": {
+    "description": "Unlock camera from any region",
+    "category": "Gameplay"
+  },
+  "247": {
+    "description": "Save horizontal movement intention of character 'B' to variable 'A'",
+    "category": "Var"
+  },
+  "248": {
+    "description": "Save vertical movement intention of character 'B' to variable 'A'",
+    "category": "Var"
+  },
+  "249": {
+    "description": "Save shoot intention of character 'B' to variable 'A'",
+    "category": "Var"
+  },
+  "250": {
+    "description": "Enable kinetic module",
+    "category": "Gameplay"
+  },
+  "251": {
+    "description": "Disable kinetic module",
+    "category": "Gameplay"
+  },
+  "252": {
+    "description": "Rotate decoration to angle-value of variable 'B' (in degrees)",
+    "category": "Var"
+  },
+  "253": {
+    "description": "Rotate decoration to angle-value 'B' (in degrees)",
+    "category": "Var"
+  },
+  "254": {
+    "description": "Attempt healing of player-initiator by 'A' hit points. Stop trigger execution if player-initiator has maximum hit points or died",
+    "category": "Character"
+  },
+  "255": {
+    "description": "Heal player 'A' by 'B' hit points",
+    "category": "Character"
+  },
+  "256": {
+    "description": "Heal player 'A' by value of variable 'B' ",
+    "category": "Character"
+  },
+  "257": {
+    "description": "Rotate decoration to angle-value of variable 'B' (in radians)",
+    "category": "Var"
+  },
+  "258": {
+    "description": "Rotate decoration to angle-value 'B' (in radians)",
+    "category": "Var"
+  },
+  "259": {
+    "description": "Move region 'A' to cursor of player 'B'",
+    "category": "Region"
+  },
+  "260": {
+    "description": "Assign sound 'B' as firing sound for weapon 'A'",
+    "category": "Gun"
+  },
+  "261": {
+    "description": "Allow Time Warp",
+    "category": "Gameplay"
+  },
+  "262": {
+    "description": "Disallow Time Warp",
+    "category": "Gameplay"
+  },
+  "263": {
+    "description": "Save energy value to variable 'A' (gameplay)",
+    "category": "Var"
+  },
+  "264": {
+    "description": "Load energy value from variable 'A' (gameplay)",
+    "category": "Var"
+  },
+  "265": {
+    "description": "Set max energy value to value of variable 'A' (gameplay)",
+    "category": "Var"
+  },
+  "266": {
+    "description": "Save current AI difficulty to variable 'A' (easy = 1, normal = 2, hard = 3)",
+    "category": "Var"
+  },
+  "267": {
+    "description": "Set decoration X scale to value 'B'",
+    "category": "Decoration"
+  },
+  "268": {
+    "description": "Set decoration Y scale to value 'B'",
+    "category": "Decoration"
+  },
+  "270": {
+    "description": "Set intensity scale of entity pushing force for player 'A' (default 0)",
+    "category": "Character"
+  },
+  "271": {
+    "description": "Set radius of entity pushing force for player 'A' (default 200)",
+    "category": "Character"
+  },
+  "272": {
+    "description": "Set Character 'A' voice preset to 'B'",
+    "category": "Character"
+  },
+  "273": {
+    "description": "Add ghost effect to Character 'A'",
+    "category": "Character"
+  },
+  "274": {
+    "description": "Remove ghost effect from Character 'A'",
+    "category": "Character"
+  },
+  "275": {
+    "description": "Continue trigger actions execution only if loading of custom images has been finished",
+    "category": "Trigger Execution"
+  },
+  "276": {
+    "description": "Continue trigger actions execution only if all custom images have been successfully loaded (any error will prevent execution until map is restarted)",
+    "category": "Trigger Execution"
+  },
+  "277": {
+    "description": "Save current number of loaded custom images to variable 'A'",
+    "category": "Var"
+  },
+  "278": {
+    "description": "Save number of expected custom images on current level to variable 'A'",
+    "category": "Var"
+  },
+  "279": {
+    "description": "Silently teleport player-initiator from Region 'A' to Region 'B'",
+    "category": "Region"
+  },
+  "280": {
+    "description": "Set variable 'A' to 1 if compromised song should play (if non-dying enemy is hunting player or player is hunting non-dying enemy). Sets to value 0.5 in case if song should be played more quietly (if there are non-dying enemies within radius of 400px). In else case sets to 0",
+    "category": "Var"
+  },
+  "281": {
+    "description": "Apply damage-over-time effect to player-initiator with power 'A' and duration 'B' (30 duration = 1 second)",
+    "category": "Character"
+  },
+  "282": {
+    "description": "Remove all effects from player-initiator",
+    "category": "Character"
+  },
+  "283": {
+    "description": "Spawn damage particles of Character 'A' at the center of Region 'B'",
+    "category": "Region"
+  },
+  "284": {
+    "description": "Play sound 'A' at Region 'B' (volume and stereo effect won't be updated once sound starts)",
+    "category": "Sound"
+  },
+  "285": {
+    "description": "Reward player with experience points for level completion (singleplayer)",
+    "category": "Experience"
+  },
+  "286": {
+    "description": "Reward player-initiator with experience points for level completion (multiplayer)",
+    "category": "Experience"
+  },
+  "287": {
+    "description": "Override existing Gun 'A' with a new gun with model 'B'",
+    "category": "Gun"
+  },
+  "288": {
+    "description": "Bind Trigger 'A' execution to key 'B' press event",
+    "category": "Trigger"
+  },
+  "289": {
+    "description": "Bind Trigger 'A' execution to key 'B' release event",
+    "category": "Trigger"
+  },
+  "290": {
+    "description": "Set Character 'A' color pattern to string-value of variable 'B' (4 small letters for each limb, each represents first symbol of color in lowercase)",
+    "category": "Var"
+  },
+  "291": {
+    "description": "Disable automatic disabling of offscreen entities (automatic disabling is enabled by default)",
+    "category": "Gameplay"
+  },
+  "292": {
+    "description": "Enable automatic disabling of offscreen entities (automatic disabling is enabled by default)",
+    "category": "Gameplay"
+  },
+  "293": {
+    "description": "Mask Decoration 'A' with Decoration 'B' (Flash Player only)",
+    "category": "Decoration"
+  },
+  "294": {
+    "description": "Set value of variable 'A' to value of variable with name of string-value of variable 'B'",
+    "category": "Var"
+  },
+  "295": {
+    "description": "Set string-value of variable 'A' to string-value 'B' while replacing all variable names found in string-value with corresponding variable values",
+    "category": "Var"
+  },
+  "296": {
+    "description": "Override existing Gun 'A' with a new gun with model by string-value of variable 'B'",
+    "category": "Var"
+  },
+  "297": {
+    "description": "Set jump multiplier for player 'A' to value 'B'",
+    "category": "Character"
+  },
+  "298": {
+    "description": "Set decoration 'A' visibility multiplier to value 'B' (0...1)",
+    "category": "Decoration"
+  },
+  "299": {
+    "description": "Set decoration 'A' visibility multiplier to value of variable 'B' (0...1)",
+    "category": "Var"
+  },
+  "300": {
+    "description": "Move, rotate and flip Decoration 'A' to position of Gun 'B'",
+    "category": "Decoration"
+  },
+  "301": {
+    "description": "Set Gun 'A' projectile scale to value 'B'",
+    "category": "Gun"
+  },
+  "302": {
+    "description": "Set Gun 'A' projectile scale to value of variable 'B'",
+    "category": "Var"
+  },
+  "303": {
+    "description": "Set Gun 'A' arm 1 hold offset to 'B' (0..1)",
+    "category": "Gun"
+  },
+  "304": {
+    "description": "Set Gun 'A' arm 2 hold offset to 'B' (0..1)",
+    "category": "Gun"
+  },
+  "305": {
+    "description": "Set Gun 'A' holstered attachment to 'B' (0 = on leg, 1 = on back)",
+    "category": "Gun"
+  },
+  "306": {
+    "description": "Set Gun 'A' length to value 'B'",
+    "category": "Gun"
+  },
+  "307": {
+    "description": "Restart map (singleplayer)",
+    "category": "Gameplay"
+  },
+  "308": {
+    "description": "Reset game termination logic (for example if game is about to end due to player's death)",
+    "category": "Gameplay"
+  },
+  "309": {
+    "description": "Make all players leave map or multiplayer match",
+    "category": "Gameplay"
+  },
+  "310": {
+    "description": "Make player-initiator leave map or multiplayer match",
+    "category": "Gameplay"
+  },
+  "311": {
+    "description": "Make player-killer leave map or multiplayer match",
+    "category": "Gameplay"
+  },
+  "312": {
+    "description": "Set Character 'A' active weapon to Gun 'B'",
+    "category": "Character"
+  },
+  "313": {
+    "description": "Make Character 'A' drop weapon at current slot",
+    "category": "Character"
+  },
+  "314": {
+    "description": "Set variable 'A' to 1 if Character 'B' is dying (variable 'A' becomes 0 in else case)",
+    "category": "Var"
+  },
+  "315": {
+    "description": "Set variable 'A' to 1 if Character-initiator is dying (variable 'A' becomes 0 in else case)",
+    "category": "Var"
+  },
+  "316": {
+    "description": "Set variable 'A' to 1 if Character-killer is dying (variable 'A' becomes 0 in else case)",
+    "category": "Var"
+  },
+  "317": {
+    "description": "Set player-initiator team to 'B'",
+    "category": "Character"
+  },
+  "318": {
+    "description": "Make Character 'A' unhittable",
+    "category": "Character"
+  },
+  "319": {
+    "description": "Make Character 'A' hittable",
+    "category": "Character"
+  },
+  "320": {
+    "description": "Switch singleplayer control to Character 'A'. Set parameter 'B' to 1 if sound needs to be played",
+    "category": "Character"
+  },
+  "321": {
+    "description": "Disallow weapon drop for Character 'A'",
+    "category": "Character"
+  },
+  "322": {
+    "description": "Allow weapon drop for Character 'A'",
+    "category": "Character"
+  },
+  "323": {
+    "description": "Move Region 'A' to Gun 'B'",
+    "category": "Region"
+  },
+  "324": {
+    "description": "Call Trigger 'B' when Gun 'A' was fully reloaded while being held by some character",
+    "category": "Gun"
+  },
+  "325": {
+    "description": "Replace variables with their values in string-value of variable 'B' and save result to variable 'A'",
+    "category": "Var"
+  },
+  "326": {
+    "description": "Replace variables with their values in string-value 'B' and save result to variable 'A'",
+    "category": "Var"
+  },
+  "327": {
+    "description": "Set variable 'A' value to random number with floating point in range 0..X, where X is value of variable 'B'",
+    "category": "Var"
+  },
+  "328": {
+    "description": "Set variable 'A' value to random integer number in range 0..X-1, where X is value of variable 'B'",
+    "category": "Var"
+  },
+  "329": {
+    "description": "Set interface visibility multiplier to value of variable 'A' and cursor visibility multiplier to value of variable 'B'",
+    "category": "Var"
+  },
+  "330": {
+    "description": "Set interface visibility multiplier to value 'A' and cursor visibility multiplier to value 'B'",
+    "category": "Interface"
+  },
+  "331": {
+    "description": "Set variable 'A' string-value to string-value of ''Gameplay modifications'' field from match starting screen",
+    "category": "Var"
+  },
+  "332": {
+    "description": "Set variable 'A' to value 1 if Gun 'B' is not in owner's active slot, set to value 0 in else case",
+    "category": "Var"
+  },
+  "333": {
+    "description": "Set variable 'A' to value 1 if Gun 'B' has owner, set to value 0 in else case",
+    "category": "Var"
+  },
+  "334": {
+    "description": "Set variable 'A' to number of frames passed since last attack of Gun 'B'",
+    "category": "Var"
+  },
+  "335": {
+    "description": "Set variable 'A' to value 1 if Gun 'B' is ready to fire, set to value 0 in else case",
+    "category": "Var"
+  },
+  "336": {
+    "description": "Set variable 'A' to X direction of Gun 'B'",
+    "category": "Var"
+  },
+  "337": {
+    "description": "Set variable 'A' to X direction of Character 'B'",
+    "category": "Var"
+  },
+  "338": {
+    "description": "Prevent alive players from seeing chat from dead players",
+    "category": "Interface"
+  },
+  "339": {
+    "description": "Let alive players see chat from dead players",
+    "category": "Interface"
+  },
+  "340": {
+    "description": "Disable leader board details (such as alive state, score, team)",
+    "category": "Interface"
+  },
+  "341": {
+    "description": "Enable leader board details (such as alive state, score, team)",
+    "category": "Interface"
+  },
+  "342": {
+    "description": "Set value of variable in variable 'A' to value of variable 'B'",
+    "category": "Var"
+  },
+  "343": {
+    "description": "Attach decoration 'A' to current player's camera. Param 'B' will determine which part of the camera (left, center..) the decoration will be attached to.",
+    "category": "Decoration"
+  },
+  "344": {
+    "description": "Set Variable 'A' to value of degrees rotation of Decoration 'B'",
+    "category": "Var"
+  },
+  "345": {
+    "description": "Change top-left position of decor 'A' to top-left position of region 'B'",
+    "category": "Decoration"
+  },
+  "346": {
+    "description": "Enable or Disable Nametag visibility of Character 'A' using parameter 'B'",
+    "category": "Character"
+  },
+  "347": {
+    "description": "Change Character skin of slot-value variable 'A' to value of variable 'B'",
+    "category": "Var"
+  },
+  "348": {
+    "description": "Set variable 'A' to time (in milliseconds) since START of game",
+    "category": "Var"
+  },
+  "349": {
+    "description": "Split variable 'A' by string-value 'B'",
+    "category": "Array"
+  },
+  "350": {
+    "description": "Get index 'B' of variable 'A' and store into variable 'A'",
+    "category": "Array"
+  },
+  "351": {
+    "description": "Move Character of slot-value variable 'A' to region 'B'",
+    "category": "Character"
+  },
+  "352": {
+    "description": "Add element 'B'(can be variable) to array 'A'",
+    "category": "Array"
+  },
+  "353": {
+    "description": "Move Region 'A' to lower body of player 'B'",
+    "category": "Region"
+  },
+  "354": {
+    "description": "Create array at variable 'A'",
+    "category": "Array"
+  },
+  "355": {
+    "description": "Change Gun 'A' cursor/crosshair to value 'B'",
+    "category": "Gun"
+  },
+  "356": {
+    "description": "Change head model of Character slot-value variable 'A' to value of variable 'B'",
+    "category": "Var"
+  },
+  "357": {
+    "description": "Change body model of Character slot-value variable 'A' to value of variable 'B'",
+    "category": "Var"
+  },
+  "358": {
+    "description": "Change arms model of Character slot-value variable 'A' to value of variable 'B'",
+    "category": "Var"
+  },
+  "359": {
+    "description": "Set Character slot-value variable 'A' color pattern to value of variable 'B' (4 small letters for each body sections, each represents first symbol of color in lowercase. - disables color change for specific section)",
+    "category": "Var"
+  },
+  "360": {
+    "description": "Change legs model of Character slot-value variable 'A' to value of variable 'B'",
+    "category": "Var"
+  },
+  "361": {
+    "description": "Skip next trigger action if value of variable 'A' is equal to the value of variable 'B'",
+    "category": "Var"
+  },
+  "362": {
+    "description": "Switch execution to trigger ID in variable 'A'",
+    "category": "Trigger Execution"
+  },
+  "363": {
+    "description": "Switch execution to trigger 'A'",
+    "category": "Trigger Execution"
+  },
+  "364": {
+    "description": "Skip next trigger action if value of variable 'A' is greater than value of variable 'B'",
+    "category": "Var"
+  },
+  "365": {
+    "description": "Skip next trigger action if value of variable 'A' is less than value of variable 'B'",
+    "category": "Var"
+  },
+  "366": {
+    "description": "Change Speed of Movable 'A' to variable 'B'",
+    "category": "Var"
+  },
+  "367": {
+    "description": "Set the frequency of calls of Timer 'A' to variable 'B'",
+    "category": "Var"
+  },
+  "368": {
+    "description": "Set Character 'A' zoom to variable 'B'",
+    "category": "Var"
+  },
+  "369": {
+    "description": "Set variable 'A' to zoom of game camera",
+    "category": "Var"
+  },
+  "370": {
+    "description": "Set Character slot-value variable 'A' zoom to variable 'B'",
+    "category": "Var"
+  },
+  "371": {
+    "description": "Move Character 'A' to random place in region 'B'",
+    "category": "Var"
+  },
+  "372": {
+    "description": "Remove beginning 'A' characters from variable 'B' (-/+)",
+    "category": "Var"
+  },
+  "373": {
+    "description": "Set variable 'A' to degrees between regions in 'B' (seperated by commas)",
+    "category": "Var"
+  },
+  "374": {
+    "description": "Set Character 'A' stability to value 'B'",
+    "category": "Character"
+  },
+  "375": {
+    "description": "Set Character 'A' stability to value of variable 'B'",
+    "category": "Character"
+  },
+  "376": {
+    "description": "Set variable 'A' to stability of Character 'B'",
+    "category": "Var"
+  },
+  "377": {
+    "description": "Set gun 'A' upgrade level to string-value/variable 'B'",
+    "category": "Gun"
+  },
+  "378": {
+    "description": "Change Gun 'A' color to 'B'",
+    "category": "Gun"
+  },
+  "379": {
+    "description": "Change Light 'A' color to 'B'",
+    "category": "Light"
+  },
+  "380": {
+    "description": "Set list of slots that can be randomly given to player during respawn using variable 'A'",
+    "category": "Gameplay"
+  },
+  "381": {
+    "description": "Set max amount of weapons that can be given to player during respawn using variable 'A'",
+    "category": "Gameplay"
+  },
+  "382": {
+    "description": "Draw line on current graphic from top-left of region 'A' to top-left of region 'B'",
+    "category": "Graphics"
+  },
+  "383": {
+    "description": "Create graphic with name 'A' at layer 'B' (1 is lowest, 3 is highest)",
+    "category": "Graphics"
+  },
+  "384": {
+    "description": "Select graphic to draw on with name 'A'",
+    "category": "Graphics"
+  },
+  "385": {
+    "description": "Begin fill of graphic with name 'A' using hex-colour 'B'",
+    "category": "Graphics"
+  },
+  "386": {
+    "description": "End fill of graphic with name 'A'",
+    "category": "Graphics"
+  },
+  "387": {
+    "description": "Draw circle on current graphic at top-left of region 'A' with radius 'B'",
+    "category": "Graphics"
+  },
+  "388": {
+    "description": "Clear graphic with name 'A'",
+    "category": "Graphics"
+  },
+  "389": {
+    "description": "Set line style of current graphic to thickness 'A' and hex-colour 'B'",
+    "category": "Graphics"
+  },
+  "390": {
+    "description": "Set starting position of graphic with name 'A' to region 'B'",
+    "category": "Graphics"
+  },
+  "391": {
+    "description": "Draw line from current position of graphic with name 'A' to top-left region 'B'",
+    "category": "Graphics"
+  },
+  "392": {
+    "description": "Move Water 'A' to Region 'B'",
+    "category": "Water"
+  },
+  "393": {
+    "description": "Set variable 'A' to value of time in miliseconds (since January 1 1970)",
+    "category": "Var"
+  },
+  "394": {
+    "description": "Set variable 'A' to value of time between January 1 1970 and variable 'B' (year, month, day) in miliseconds",
+    "category": "Var"
+  },
+  "395": {
+    "description": "Set water 'A' damage to string-value/variable 'B'",
+    "category": "Water"
+  },
+  "396": {
+    "description": "Move region 'A' to game camera",
+    "category": "Region"
+  },
+  "397": {
+    "description": "Set variable 'A' to value of 1 if mouse is held down and to 0 if else case",
+    "category": "Var"
+  },
+  "398": {
+    "description": "Set variable 'A' to distance between 2 regions in 'B' (separated by commas)",
+    "category": "Var"
+  },
+  "399": {
+    "description": "Split variable 'A' by value of variable 'B'",
+    "category": "Array"
+  },
+  "400": {
+    "description": "Add ghost effect to Character slot-value variable 'A'",
+    "category": "Var"
+  },
+  "401": {
+    "description": "Remove ghost effect from Character slot-value variable 'A'",
+    "category": "Var"
+  },
+  "402": {
+    "description": "Move Character slot-value variable 'A' to start position",
+    "category": "Character"
+  },
+  "403": {
+    "description": "Set gun 'A' color matrix to array 'B' (4 rows, 5 columns, first 4 columns are multiplicative, last column is additive)",
+    "category": "Gun"
+  },
+  "404": {
+    "description": "Set Character slot-value variable 'A' properties to properties of Character slot-value variable 'B' (hitpoints, max hitpoints, mobility, voice, model)",
+    "category": "Var"
+  },
+  "405": {
+    "description": "Join variable 'A' by value of variable 'B'",
+    "category": "Array"
+  },
+  "406": {
+    "description": "Continue execution of this trigger only if tracing from center of Region 'A' to center of Region 'B'  doesn't intersect a character",
+    "category": "Trigger Execution"
+  },
+  "407": {
+    "description": "Continue execution of this trigger only if tracing from center of Region 'A' to center of Region 'B' intersects a character",
+    "category": "Trigger Execution"
+  },
+  "408": {
+    "description": "Set Decor 'A' color matrix to Array 'B' (array must have 4x5 items)",
+    "category": "Decoration"
+  },
+  "409": {
+    "description": "Change water 'A' color to string-value/variable 'B'",
+    "category": "Water"
+  },
+  "410": {
+    "description": "Set variable 'A' to active gun model of Character 'B'",
+    "category": "Var"
+  },
+  "411": {
+    "description": "Make Character 'A' drop Gun 'B'",
+    "category": "Character"
+  },
+  "425": {
+    "description": "Set variable 'A' value to X speed of Character 'B'",
+    "category": "Var"
+  },
+  "426": {
+    "description": "Set variable 'A' value to Y speed of Character 'B'",
+    "category": "Var"
+  },
+  "427": {
+    "description": "Set variable 'A' value to X speed of Character slot-value variable 'B'",
+    "category": "Var"
+  },
+  "428": {
+    "description": "Set variable 'A' value to Y speed of Character slot-value variable 'B'",
+    "category": "Var"
+  },
+  "429": {
+    "description": "Set X speed of Character 'A' to value of variable 'B'",
+    "category": "Character"
+  },
+  "430": {
+    "description": "Set Y speed of Character 'A' to value of variable 'B'",
+    "category": "Character"
+  },
+  "431": {
+    "description": "Set X speed of Character slot-value variable 'A' to value of variable 'B'",
+    "category": "Var"
+  },
+  "432": {
+    "description": "Set Y speed of Character slot-value variable 'A' to value of variable 'B'",
+    "category": "Var"
+  },
+  "433": {
+    "description": "Set opacity of graphic with name 'A' to variable 'B' (percent)",
+    "category": "Graphics"
+  },
+  "434": {
+    "description": "Set variable 'A' value to speed of Character 'B'",
+    "category": "Var"
+  },
+  "435": {
+    "description": "Set variable 'A' value to speed of Character slot-value variable 'B'",
+    "category": "Var"
+  },
+  "436": {
+    "description": "Set variable 'A' to map ID of current game",
+    "category": "Var"
+  },
+  "437": {
+    "description": "Move, rotate and flip Decoration 'A' to position of Vehicle 'B'",
+    "category": "Decoration"
+  },
+  "438": {
+    "description": "Enable or Disable visibility of Vehicle 'A' using parameter 'B'",
+    "category": "Vehicle"
+  },
+  "439": {
+    "description": "Call Trigger 'B' when Vehicle 'A' destroyed",
+    "category": "Vehicle"
+  },
+  "440": {
+    "description": "Initiate region 'A' using character 'B' as initiator",
+    "category": "Region"
+  },
+  "441": {
+    "description": "Enable kinetic module through walls using Parameter 'A'",
+    "category": "Gameplay"
+  },
+  "443": {
+    "description": "Set line style of current graphic to thickness of variable 'A' and hex-colour of variable 'B'",
+    "category": "Graphics"
+  },
+  "444": {
+    "description": "Change Gun 'A' bullet life multiplier to variable 'B'",
+    "category": "Gun"
+  },
+  "446": {
+    "description": "Set Character 'A' Health bar GUI opacity to value 'B'",
+    "category": "Character"
+  },
+  "447": {
+    "description": "Set Character 'A' Health bar GUI opacity to variable 'B'",
+    "category": "Character"
+  },
+  "448": {
+    "description": "Set Character slot-value variable 'A' Health bar GUI opacity to value 'B'",
+    "category": "Var"
+  },
+  "449": {
+    "description": "Set Character slot-value variable 'A' Health bar GUI opacity to variable 'B'",
+    "category": "Var"
+  },
+  "450": {
+    "description": "Set range of bullet mirroring to value 'A' (default value is 30)",
+    "category": "Gameplay"
+  },
+  "451": {
+    "description": "Change Character 'A' sword life to variable 'B'",
+    "category": "Character"
+  },
+  "452": {
+    "description": "Change Character slot-value variable 'A' sword life to variable 'B'",
+    "category": "Var"
+  },
+  "453": {
+    "description": "Set disabling of global player collision to parameter 'A'",
+    "category": "Gameplay"
+  },
+  "454": {
+    "description": "Set variable 'A' to time elapsed of Timer 'B'",
+    "category": "Timer"
+  },
+  "455": {
+    "description": "Change Character 'A' nickname to variable 'B'",
+    "category": "Character"
+  },
+  "456": {
+    "description": "Change Character 'A' nametag text to variable 'B'",
+    "category": "Character"
+  },
+  "458": {
+    "description": "Set disabling of Character 'A' psi swords to parameter 'B'",
+    "category": "Character"
+  },
+  "459": {
+    "description": "Set disabling of Character slot-value variable 'A' psi swords to parameter 'B'",
+    "category": "Character"
+  },
+  "460": {
+    "description": "Set Barrel 'A' hitpoints to variable 'B'",
+    "category": "Barrel"
+  },
+  "461": {
+    "description": "Clone Barrel 'A' and spawn it at centre of Region 'B'",
+    "category": "Barrel"
+  },
+  "462": {
+    "description": "Move, rotate and flip Decoration 'A' to Barrel 'B'",
+    "category": "Decoration"
+  },
+  "463": {
+    "description": "Set variable 'A' to value of chatting status (0 = off, 1 = chat, 2 = team chat)",
+    "category": "Var"
+  },
+  "464": {
+    "description": "Set Character 'A' current and max hit points to variable 'B'",
+    "category": "Character"
+  },
+  "465": {
+    "description": "Set Character slot-value variable 'A' current and max hit points to variable 'B'",
+    "category": "Var"
+  },
+  "466": {
+    "description": "Set decoration 'A' X scale to variable 'B'",
+    "category": "Decoration"
+  },
+  "467": {
+    "description": "Set decoration 'A' Y scale to variable 'B'",
+    "category": "Decoration"
+  },
+  "468": {
+    "description": "Set disabling of global limb breaking to parameter 'A'",
+    "category": "Gameplay"
+  },
+  "469": {
+    "description": "Set Gun 'A' rotation to variable 'B'",
+    "category": "Gun"
+  },
+  "470": {
+    "description": "Set Gun 'A' X scale to variable 'B'",
+    "category": "Gun"
+  },
+  "471": {
+    "description": "Set variable 'A' to rotation of Gun 'B'",
+    "category": "Var"
+  },
+  "472": {
+    "description": "Set variable 'A' to X scale of Gun 'B'",
+    "category": "Var"
+  },
+  "473": {
+    "description": "Set Gun 'A' Y scale to variable 'B'",
+    "category": "Gun"
+  },
+  "474": {
+    "description": "Set variable 'A' to Y scale of Gun 'B'",
+    "category": "Var"
+  },
+  "476": {
+    "description": "Change Vehicle 'A' nickname to variable 'B'",
+    "category": "Vehicle"
+  },
+  "477": {
+    "description": "Set disabling of global fall impact instability using parameter 'A'",
+    "category": "Gameplay"
+  },
+  "478": {
+    "description": "Change Decoration 'A' blend mode to Mode 'B'",
+    "category": "Decoration"
+  },
+  "479": {
+    "description": "Change global fall impact instability height multiplier to value 'A'",
+    "category": "Gameplay"
+  },
+  "480": {
+    "description": "Move region 'A' relative to current position along variable 'B' X",
+    "category": "Region"
+  },
+  "481": {
+    "description": "Move region 'A' relative to current position along variable 'B' Y",
+    "category": "Region"
+  },
+  "482": {
+    "description": "Show text bubble above Character 'B' with text 'A'",
+    "category": "Character"
+  },
+  "483": {
+    "description": "Set Disabling of ambient sounds using parameter 'A'",
+    "category": "Gameplay"
+  },
+  "484": {
+    "description": "Set variable 'A' to active weapon of Character 'B'",
+    "category": "Character"
+  },
+  "485": {
+    "description": "Set Character 'A' active weapon slot to slot 'B'",
+    "category": "Character"
+  },
+  "486": {
+    "description": "Change Gun 'A' bullet speed multiplier to variable 'B'",
+    "category": "Gun"
+  },
+  "487": {
+    "description": "Destroy all projectiles in region 'A'",
+    "category": "Region"
+  },
+  "488": {
+    "description": "Move projectiles in region 'A' to region 'B'",
+    "category": "Region"
+  },
+  "491": {
+    "description": "Multiply all projectiles' speed in region 'A' to value 'B'",
+    "category": "Region"
+  },
+  "492": {
+    "description": "Continue execution of this trigger only if Region 'A' contains projectiles",
+    "category": "Trigger Execution"
+  },
+  "493": {
+    "description": "Continue execution of this trigger only if Region 'A' doesn't contain projectiles",
+    "category": "Trigger Execution"
+  },
+  "494": {
+    "description": "Clone Gun 'A' at center of region 'B'",
+    "category": "Gun"
+  },
+  "495": {
+    "description": "Save shoot intention of Character slot-value variable 'B' to variable 'A'",
+    "category": "Character"
+  },
+  "496": {
+    "description": "Save horizontal movement intention of Character slot-value variable 'B' to variable 'A'",
+    "category": "Character"
+  },
+  "497": {
+    "description": "Save vertical movement intention of Character slot-value variable 'B' to variable 'A'",
+    "category": "Character"
+  },
+  "498": {
+    "description": "Set Character slot-value variable 'A' current and max hit points to value 'B'",
+    "category": "Character"
+  },
+  "499": {
+    "description": "Initiate region 'A' using Character slot-value variable 'B' as initiator",
+    "category": "Region"
+  },
+  "500": {
+    "description": "Set game speed to variable 'A' frames per second (default game speed is 30. Does not influence rendering)",
+    "category": "Gameplay"
+  },
+  "505": {
+    "description": "Change team of Character 'A' to variable 'B'",
+    "category": "Character"
+  },
+  "506": {
+    "description": "Change team of Character slot-value variable 'A' to variable 'B'",
+    "category": "Character"
+  },
+  "507": {
+    "description": "Change team of Character slot-value variable 'A' to value 'B'",
+    "category": "Character"
+  },
+  "508": {
+    "description": "Get all active player slots and save result to Array 'A'",
+    "category": "Array"
+  },
+  "509": {
+    "description": "Set variable 'A' to length of Gun 'B'",
+    "category": "Var"
+  },
+  "510": {
+    "description": "Set variable 'A' to value of current framerate",
+    "category": "Var"
+  },
+  "511": {
+    "description": "Change the number of hit points of Character slot-value variable 'A' to varible 'B' percents",
+    "category": "Character"
+  },
+  "512": {
+    "description": "Kill all Characters at Region 'B' which are not allied to Character slot-value variable 'A'",
+    "category": "Character"
+  },
+  "513": {
+    "description": "Set current hit points of Character slot-value variable 'A' to value of variable 'B' hit points (not set points of each limb)",
+    "category": "Character"
+  },
+  "514": {
+    "description": "Clone Character slot-value variable 'A' and spawn it in the centre of Region 'B'",
+    "category": "Character"
+  },
+  "515": {
+    "description": "Clone Character slot-value variable 'A' and spawn it in random place of Region 'B'",
+    "category": "Character"
+  },
+  "516": {
+    "description": "Force all enemies of Character slot-value variable 'A' who located in region 'B' hunt for Character slot-value variable 'A'",
+    "category": "Character"
+  },
+  "517": {
+    "description": "Set 'AI Behavior' parameter of computer-controlled Character slot-value variable 'A' to value 'B'",
+    "category": "Character"
+  },
+  "518": {
+    "description": "Change Character slot-value variable 'A' nickname to variable 'B'",
+    "category": "Character"
+  },
+  "519": {
+    "description": "Force Character slot-value variable 'A' to drop all weapons",
+    "category": "Character"
+  },
+  "520": {
+    "description": "Multiply Character slot-value variable 'A' speed by variable 'B'",
+    "category": "Character"
+  },
+  "521": {
+    "description": "Change Character slot-value variable 'A' mobility factor to variable 'B'",
+    "category": "Character"
+  },
+  "522": {
+    "description": "Change Character slot-value variable 'A' armor type to value 'B'",
+    "category": "Character"
+  },
+  "523": {
+    "description": "Change blood color of Character slot-value variable 'A' to HEX color 'B'",
+    "category": "Character"
+  },
+  "525": {
+    "description": "Force Character slot-value variable 'A' to look at random point in Region 'B'",
+    "category": "Character"
+  },
+  "526": {
+    "description": "Force Character slot-value variable 'A' to hunt Character slot-value variable 'B'",
+    "category": "Character"
+  },
+  "527": {
+    "description": "Damage Character slot-value variable 'A' head hitpoints by variable 'B'",
+    "category": "Character"
+  },
+  "528": {
+    "description": "Damage Character slot-value variable 'A' arms hitpoints by variable 'B'",
+    "category": "Character"
+  },
+  "529": {
+    "description": "Damage Character slot-value variable 'A' body hitpoints by variable 'B'",
+    "category": "Character"
+  },
+  "530": {
+    "description": "Damage Character slot-value variable 'A' legs hitpoints by variable 'B'",
+    "category": "Character"
+  },
+  "531": {
+    "description": "Save inventory info of Character slot-value variable 'B' to variable 'A'",
+    "category": "Var"
+  },
+  "532": {
+    "description": "Spawn all weapons stored in variable 'A' at position of Character slot-value variable 'B'",
+    "category": "Var"
+  },
+  "533": {
+    "description": "Set Character slot-value variable 'A' scale to variable 'B'",
+    "category": "Character"
+  },
+  "534": {
+    "description": "Heal Character slot-value variable 'A' by variable 'B'",
+    "category": "Character"
+  },
+  "535": {
+    "description": "Set intensity of entity pushing force for Character slot-value variable 'A' to variable 'B' (default 0)",
+    "category": "Character"
+  },
+  "536": {
+    "description": "Set radius of entity pushing force for Character slot-value variable 'A' to variable 'B'",
+    "category": "Character"
+  },
+  "537": {
+    "description": "Set Character slot-value variable 'A' voice preset to 'B'",
+    "category": "Character"
+  },
+  "538": {
+    "description": "Apply damage-over-time-effect to Character slot-value variable 'A' with power 'B' and duration 'B' (separated by commas)",
+    "category": "Character"
+  },
+  "539": {
+    "description": "Remove all effects from Character slot-value variable 'A'",
+    "category": "Character"
+  },
+  "540": {
+    "description": "Spawn damage particles of Character slot-value variable 'A' at the center of Region 'B'",
+    "category": "Region"
+  },
+  "541": {
+    "description": "Set jump multiplier for Character slot-value variable 'A' to variable 'B'",
+    "category": "Character"
+  },
+  "542": {
+    "description": "Set Character slot-value variable 'A' active weapon to Gun 'B'",
+    "category": "Character"
+  },
+  "543": {
+    "description": "Make Character slot-value variable 'A' drop weapon at current slot",
+    "category": "Character"
+  },
+  "544": {
+    "description": "Set variable 'A' to 1 if Character slot-value variable 'B' is dying",
+    "category": "Var"
+  },
+  "545": {
+    "description": "Make Character slot-value variable 'A' unhittable",
+    "category": "Character"
+  },
+  "546": {
+    "description": "Make Character slot-value variable 'A' hittable",
+    "category": "Character"
+  },
+  "547": {
+    "description": "Disallow weapon drop for Character slot-value variable 'A'",
+    "category": "Character"
+  },
+  "548": {
+    "description": "Allow weapon drop for Character slot-value variable 'A'",
+    "category": "Character"
+  },
+  "549": {
+    "description": "Set disabling of Character slot-value variable 'A' psi swords to parameter 'B'",
+    "category": "Character"
+  },
+  "550": {
+    "description": "Show text bubble above Character slot-value variable 'B' with text 'A'",
+    "category": "Character"
+  },
+  "551": {
+    "description": "Set Character slot-value variable 'A' active weapon to slot 'B'",
+    "category": "Character"
+  },
+  "552": {
+    "description": "Set variable 'A' to active weapon of Character slot-value variable 'B'",
+    "category": "Character"
+  },
+  "553": {
+    "description": "Make Character slot-value variable 'A' drop Gun 'B'",
+    "category": "Character"
+  },
+  "554": {
+    "description": "Change Character slot-value variable 'A' sword life to variable 'B'",
+    "category": "Character"
+  },
+  "555": {
+    "description": "Set variable 'A' to active gun model of Character slot-value variable 'B'",
+    "category": "Character"
+  },
+  "556": {
+    "description": "Move Character slot-value variable 'A' to random place in Region 'B'",
+    "category": "Character"
+  },
+  "557": {
+    "description": "Teleport Character slot-value variable 'A' to Region 'B' and invert speed by X axis (used to avoid loop teleportation)",
+    "category": "Region"
+  },
+  "558": {
+    "description": "Teleport Character slot-value variable 'A' to Region 'B'",
+    "category": "Region"
+  },
+  "559": {
+    "description": "Silently teleport Character slot-value variable 'A' to Region 'B'",
+    "category": "Region"
+  },
+  "-1": {
+    "description": "Do nothing",
+    "category": "Control"
+  }
+}

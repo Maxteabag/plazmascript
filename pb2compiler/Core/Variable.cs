@@ -396,5 +396,19 @@ namespace PlazmaScript.Core
                 TriggerId = 110
             };
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Variable other)
+            {
+                return Name == other.Name;
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return Name?.GetHashCode() ?? 0;
+        }
     }
 }

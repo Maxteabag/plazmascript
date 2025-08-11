@@ -17,7 +17,7 @@ namespace PlazmaScript.Core
         public int MaxCalls { get; set; } = -1; //Infinite by default
 
 
-        public Trigger(string uid = "", bool ExecuteAtStart = false)
+        public Trigger(string uid = "", bool ExecuteAtStart = false, bool autoAddToMap = true)
         {
             if(string.IsNullOrEmpty(uid))
             {
@@ -28,7 +28,10 @@ namespace PlazmaScript.Core
             Y = 0;
             Actions = new List<TriggerAction>();
 
-            PB2Map.MapObjects.Add(this);
+            if (autoAddToMap)
+            {
+                PB2Map.MapObjects.Add(this);
+            }
 
             if (ExecuteAtStart)
             {
@@ -215,7 +218,47 @@ namespace PlazmaScript.Core
             });
         }
 
+        /// <summary>
+        /// Deactivate another trigger
+        /// </summary>
+        /// <param name="trigger">The trigger to deactivate</param>
+        public void Deactivate(Trigger trigger)
+        {
+            AddAction(new TriggerAction
+            {
+                ParameterA = trigger.Uid,
+                ParameterB = "-1",
+                TriggerId = 19
+            });
+        }
 
+        /// <summary>
+        /// Activate another trigger
+        /// </summary>
+        /// <param name="trigger">The trigger to activate</param>
+        public void Activate(Trigger trigger)
+        {
+            AddAction(new TriggerAction
+            {
+                ParameterA = trigger.Uid,
+                ParameterB = "-1",
+                TriggerId = 20
+            });
+        }
+
+        /// <summary>
+        /// Reset the number of remaining calls for another trigger to 0
+        /// </summary>
+        /// <param name="trigger">The trigger to reset</param>
+        public void ResetCalls(Trigger trigger)
+        {
+            AddAction(new TriggerAction
+            {
+                ParameterA = trigger.Uid,
+                ParameterB = "-1",
+                TriggerId = 21
+            });
+        }
 
         public override XElement CreateXmlElement()
         {

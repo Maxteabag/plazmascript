@@ -1,0 +1,5 @@
+bin/
+obj/
+password.txt
+*.user
+.vs/

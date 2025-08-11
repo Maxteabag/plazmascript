@@ -12,6 +12,7 @@ namespace PlazmaScript.Core
         public int Delay { get; set; } = 30;
         public int MaxCalls { get; set; } = 1;
         public Trigger Target { get; set; }
+        private string _targetUid;
 
 
         public Timer(string uid)
@@ -30,6 +31,22 @@ namespace PlazmaScript.Core
             PB2Map.MapObjects.Add(this);
         }
 
+        public Timer(int delay, int maxCalls, bool launchedOnStart, string targetUid, bool autoAddToMap = true)
+        {
+            Uid = RandomGenerator.RandomString(10);
+            X = 0;
+            Y = 0;
+            Delay = delay;
+            MaxCalls = maxCalls;
+            LaunchedOnStart = launchedOnStart;
+            _targetUid = targetUid;
+            
+            if (autoAddToMap)
+            {
+                PB2Map.MapObjects.Add(this);
+            }
+        }
+
         public override XElement CreateXmlElement()
         {
             var element = new XElement("timer");
@@ -44,6 +61,10 @@ namespace PlazmaScript.Core
             if (Target != null)
             {
                 element.SetAttributeValue("target", Target.Uid);
+            }
+            else if (!string.IsNullOrEmpty(_targetUid))
+            {
+                element.SetAttributeValue("target", _targetUid);
             }
             else
             {

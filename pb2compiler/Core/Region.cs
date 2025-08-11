@@ -62,5 +62,88 @@ namespace PlazmaScript.Core
             };
         }
 
+        /// <summary>
+        /// Quickly move this region to the position of another region
+        /// </summary>
+        /// <param name="targetRegion">The target region to move to</param>
+        public TriggerAction QuickMoveToRegion(Region targetRegion)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = targetRegion.Uid,
+                TriggerId = 2
+            };
+        }
+
+        /// <summary>
+        /// Move this region to the center of another region
+        /// </summary>
+        /// <param name="targetRegion">The target region</param>
+        public TriggerAction MoveToCenterOf(Region targetRegion)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = targetRegion.Uid,
+                TriggerId = 18
+            };
+        }
+
+        /// <summary>
+        /// Make damage in this region with specified power
+        /// </summary>
+        /// <param name="damage">The damage power in hit points</param>
+        public TriggerAction MakeDamage(int damage)
+        {
+            return new TriggerAction
+            {
+                ParameterA = damage.ToString(),
+                ParameterB = Uid,
+                TriggerId = 6
+            };
+        }
+
+        /// <summary>
+        /// Destroy all vehicles in this region
+        /// </summary>
+        public TriggerAction DestroyAllVehicles()
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = "-1",
+                TriggerId = 12
+            };
+        }
+
+        /// <summary>
+        /// Kill all characters in this region that are not allied to a specific character
+        /// </summary>
+        /// <param name="allyCharacter">Characters allied to this will be spared</param>
+        public TriggerAction KillEnemiesOf(Character allyCharacter)
+        {
+            return new TriggerAction
+            {
+                ParameterA = allyCharacter.Uid,
+                ParameterB = Uid,
+                TriggerId = 11
+            };
+        }
+
+        /// <summary>
+        /// Harm the stability of all characters in this region
+        /// </summary>
+        /// <param name="power">The power of the stability harm</param>
+        public TriggerAction HarmStability(int power)
+        {
+            return new TriggerAction
+            {
+                ParameterA = power.ToString(),
+                ParameterB = Uid,
+                TriggerId = 10
+            };
+        }
+
     }
 }

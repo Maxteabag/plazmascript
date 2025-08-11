@@ -66,6 +66,20 @@ namespace PlazmaScript.Core
             };
         }
 
+        /// <summary>
+        /// Move this gun to a region
+        /// </summary>
+        /// <param name="region">The target region</param>
+        public TriggerAction MoveToRegion(Region region)
+        {
+            return new TriggerAction
+            {
+                ParameterA = Uid,
+                ParameterB = region.Uid,
+                TriggerId = 15
+            };
+        }
+
         internal TriggerAction AllowForVehicles()
         {
             return new TriggerAction
