@@ -212,6 +212,47 @@ namespace PlazmaScript.Core
         }
 
         /// <summary>
+        /// Execute a trigger on the next tick (after current execution chain completes).
+        /// Uses a Timer with infinite calls that disables itself after first execution to prevent intra-tick variable conflicts.
+        /// </summary>
+        /// <param name="triggerUid">UID of trigger to execute next tick</param>
+        public void ExecuteOnNextTick(string triggerUid)
+        {
+            // Create cleanup trigger that disables the timer and executes the target
+            var cleanupTrigger = new Trigger()
+            {
+                X = X + 60,
+                Y = Y
+            };
+            
+            // Create timer with infinite calls but disabled initially
+            var deferredTimer = new Timer(0, -1, false, cleanupTrigger.Uid, true)
+            {
+                X = X + 30,
+                Y = Y
+            };
+            
+            // Cleanup trigger disables the timer and executes the target
+            cleanupTrigger.AddAction(deferredTimer.Deactivate());
+            cleanupTrigger.Execute(triggerUid);
+            
+            // Activate the timer to start the next-tick execution
+            AddAction(deferredTimer.Activate());
+        }
+
+        /// <summary>
+        /// Execute a trigger on the next tick (after current execution chain completes).
+        /// Uses a Timer with delay 0 to defer execution, preventing intra-tick variable conflicts.
+        /// </summary>
+        /// <param name="trigger">Trigger to execute next tick</param>
+        public void ExecuteOnNextTick(Trigger trigger)
+        {
+            trigger.X = X + 30;
+            trigger.Y = Y;
+            ExecuteOnNextTick(trigger.Uid);
+        }
+
+        /// <summary>
         /// Request webpage with URL stored in <paramref name="request"/> to <paramref name="response"/>. <paramref name="response"/> will be "loading..." for some time.
         /// </summary>
         /// <param name="trigger"></param>
